@@ -8752,11 +8752,33 @@ $(document).ready(function() {
         $('.post-wrap, .header, html').removeClass('active');
 
     });
-    
-    
+
+       
+        
 
 });
 
+// ширина блока комментов зависит от ширины слайдера
+// если данный элемент есть на загруженной странице то запускаем код
+// иначе будет ошибка в консоле, и ниже написанные скрипты работать не будут
+function widthComments() {
+    if (document.querySelector('.seller__slider') && window.innerWidth > 992) {
+        let widthSlider = document.querySelector('.seller__slider').offsetWidth;
+        let distanceSlider = document.querySelector('.seller__slider').getBoundingClientRect().left;
+        document.querySelector('.seller-descr').style.width = widthSlider + 'px';
+        document.querySelector('.seller-descr').style.marginLeft = (distanceSlider - 100) + 'px';
+    }
+    if (document.querySelector('.seller__slider') && window.innerWidth < 992) {
+        document.querySelector('.seller-descr').style.width = 100 + "%";
+    }
+};
+
+widthComments();
+
+// запуск данной данной функции при смене ширины браузера
+window.onresize = function(event) {
+    widthComments();
+};
 
 
 
@@ -8827,54 +8849,55 @@ select2();
 
 
 
-
-
-
-
 // Simplebar нестандартный скролл для товара
-
-new SimpleBar(document.getElementById('goods-buy_scroll'), {
-    autoHide: false,  // чтобы ползунок не пропадал
-    scrollbarMaxSize: 100 // максимальная высота ползунка
-});
+if (document.getElementById('goods-buy_scroll')) {
+    new SimpleBar(document.getElementById('goods-buy_scroll'), {
+        autoHide: false,  // чтобы ползунок не пропадал
+        scrollbarMaxSize: 100 // максимальная высота ползунка
+    });
+}
 
 // Simplebar нестандартный скролл для отзывов
-
-new SimpleBar(document.getElementById('reviews-popup_scroll'), {
-    autoHide: false,  // чтобы ползунок не пропадал
-    scrollbarMaxSize: 100 // максимальная высота ползунка
-});
+if (document.getElementById('reviews-popup_scroll')) {
+    new SimpleBar(document.getElementById('reviews-popup_scroll'), {
+        autoHide: false,  // чтобы ползунок не пропадал
+        scrollbarMaxSize: 100 // максимальная высота ползунка
+    });
+}
 
 // Simplebar нестандартный скролл для совместных покупок
-
-new SimpleBar(document.getElementById('together-popup_scroll'), {
-    autoHide: false,  // чтобы ползунок не пропадал
-    scrollbarMaxSize: 100 // максимальная высота ползунка
-});
+if (document.getElementById('together-popup_scroll')) {
+    new SimpleBar(document.getElementById('together-popup_scroll'), {
+        autoHide: false,  // чтобы ползунок не пропадал
+        scrollbarMaxSize: 100 // максимальная высота ползунка
+    });
+}
 
 // Simplebar нестандартный скролл для описания товара
-
-new SimpleBar(document.getElementById('details-popup_scroll'), {
-    autoHide: false,  // чтобы ползунок не пропадал
-    scrollbarMaxSize: 100 // максимальная высота ползунка
-});
+if (document.getElementById('details-popup_scroll')) {
+    new SimpleBar(document.getElementById('details-popup_scroll'), {
+        autoHide: false,  // чтобы ползунок не пропадал
+        scrollbarMaxSize: 100 // максимальная высота ползунка
+    });
+}
 
 // Simplebar нестандартный скролл для добавления поста авторизованному пользователю
-
-new SimpleBar(document.getElementById('post-popup_scroll'), {
-    autoHide: false,  // чтобы ползунок не пропадал
-    scrollbarMaxSize: 100 // максимальная высота ползунка
-});
-
-
-
+if (document.getElementById('post-popup_scroll')) {
+    new SimpleBar(document.getElementById('post-popup_scroll'), {
+        autoHide: false,  // чтобы ползунок не пропадал
+        scrollbarMaxSize: 100 // максимальная высота ползунка
+    });
+}
 
 
-
-
-
-
-
+// Simplebar нестандартный скролл для публикации продавца
+if (document.getElementById('review-seller__goods_scroll') && window.innerWidth > 665) {
+    document.getElementById('review-seller__goods_scroll').setAttribute("data-simplebar", "init");
+    new SimpleBar(document.getElementById('review-seller__goods_scroll'), {
+        autoHide: false,  // чтобы ползунок не пропадал
+        scrollbarMaxSize: 100 // максимальная высота ползунка
+    });
+}
 
 
 
