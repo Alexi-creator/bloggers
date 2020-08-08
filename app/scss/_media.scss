@@ -45,6 +45,12 @@
   .goods-buy__price-more {
     min-width: 165px;
   }
+  .card-categories__list {
+    li {
+      margin-right: 7px;
+      font-size: 14px;
+    }
+  }
 }
 
 @media(max-width:1600px) {
@@ -67,6 +73,8 @@
     min-width: 155px;
   }
 }
+
+
 
 @media(max-width:1500px) {
   .header__menu {
@@ -135,6 +143,15 @@
   }
   .goods-buy__price-base-title {
     top: 3px;
+  }
+  .card-categories__list {
+    li {
+      margin-right: 10px;
+      font-size: 16px;
+    }
+  }
+  .card-categories__item {
+    width: calc(33.333% - 20px);
   }
 }
 
@@ -275,6 +292,12 @@
 @media(max-width:1300px) {
   .card__label {
     right: -73px;
+  }
+}
+
+@media(max-width:1270px) {
+  .categories__title {
+    margin-right: 0;
   }
 }
 
@@ -531,7 +554,17 @@
   }
 
   .review-seller__goods {
-    max-height: 396px;
+    max-height: 370px;
+  }
+
+  .categories {
+    .goods-menu {
+      display: none;
+    }
+  } 
+
+  .categories__main-wrap {
+    width: 100%;
   }
   
 
@@ -926,7 +959,7 @@
       }
     }
     .review-seller__goods {
-      max-height: 305px;
+      max-height: 297px;
     }
     .goods-buy__btn-subscribe {
       width: 100px;
@@ -936,6 +969,10 @@
     .goods-buy__brand-name {
       font-size: 16px;
     }
+  }
+
+  .goods-item__sale.coupon {
+    height: 60px;
   }
 
   .seller__review .goods-buy__brand-add {
@@ -999,12 +1036,6 @@
     height: 140px;
   }
 
-  .seller-profile__name:after {
-    width: 49px;
-    height: 21px;
-    right: -39px;
-  }
-
   .goods-item__icon1 {
     width: 17px;
     height: 12px;
@@ -1025,13 +1056,28 @@
     font-size: 12px;
   }
 
-  .goods-item__like, .review-seller__where-find {
+  .review-seller__where-find {
     font-size: 12px;
   }
 
   .seller-profile__logo {
     width: 58px;
     height: 58px;
+  }
+
+  .card-categories__stock {
+    top: -43px;
+  }
+
+  .card-categories__list li {
+    font-size: 14px;
+  }
+
+  .categories__filter {
+    flex-wrap: wrap;
+    .filter-wrap {
+      margin-bottom: 10px;
+    }
   }
 
 }
@@ -1061,6 +1107,13 @@
       font-size: 10px;
     }
   }
+  .seller-profile__name {
+    .card__label-bottom {
+      left: 6px;
+      top: -14px;
+    }
+  }
+  
 }
 
 @media(max-width:880px) {
@@ -1073,7 +1126,16 @@
   .goods-buy__tooltip {
     left: 7px;
   }
-  
+  .card-categories__list li {
+    font-size: 12px;
+    margin-right: 7px;
+  }
+  .card-categories__price {
+    font-size: 16px;
+  }
+  .card-categories__descr {
+    bottom: -147px;
+  }
   
 
 }
@@ -1095,6 +1157,20 @@
       font-size: 6px;
     }
   }
+  .seller-profile__name {
+    .card__label {
+      font-size: 14px;
+    }
+    .card__label-top, .card__label-bottom {
+      span {
+        font-size: 9px;
+      }
+    }
+    .card__label-bottom {
+      top: -14px;
+    }
+  }
+  
 }
 
 @media(max-width:850px) {
@@ -1142,8 +1218,13 @@
   .card__publish, .card__followers {
     font-size: 11px;
   }
+  .card-categories__price {
+    font-size: 14px;
+  }
+  .card-categories__descr {
+    bottom: -145px;
+  }
 }
-
 
 
 
@@ -1240,6 +1321,15 @@
     position: relative;
     left: 17px;
     top: -8px;
+  }
+
+  .seller-profile__name {
+    .card__label-bottom {
+      top: -9px;
+    }
+    .tooltip {
+      top: -135px;
+    }
   }
 
   .goods-slider {
@@ -1418,8 +1508,8 @@
     padding-top: 10px;
     width: 60px;
     &-heart {
-      width: 20px;
-      height: 19px;
+      width: 25px;
+      height: 23px;
     }
     &-share {
       width: 19px;
@@ -1442,8 +1532,8 @@
       max-height: 280px;
     }
     .review-seller__goods {
-      max-height: 210px;
-      padding-right: 12px;
+      max-height: 200px;
+      padding-right: 8px;
       &:after {
         height: 70px;
       }
@@ -1517,16 +1607,8 @@
     font-size: 12px;
   }
 
-  .seller-profile__name:after {
-    width: 40px;
-    height: 14px;
-    right: -27px;
-    top: 0;
-  }
-
   .seller__review .goods-buy__brand-add {
     max-width: 119px;
-    white-space: normal;
   }
   
   .seller__review .goods-item__name {
@@ -1548,6 +1630,14 @@
 
   .goods-item__sale.coupon{
     height: 65px;
+  }
+
+  .card-categories__item {
+    width: calc(50% - 20px);
+  }
+
+  .card-categories__price {
+    font-size: 18px;
   }
 
 
@@ -1574,6 +1664,23 @@
   
   .card__publish, .card__followers {
     font-size: 14px;
+  }
+
+  .goods-item__sale-item {
+    font-size: 9px;
+  }
+  .goods-item__sale-item span {
+    font-size: 11px;
+  }
+  .goods-item__price_sale, .goods-item__price-total  {
+    font-size: 10px;
+  }
+  .publications-seller .goods-buy__btn-subscribe {
+    width: 82px;
+    font-size: 16px;
+  }
+  .card-categories__stock {
+    top: -41px;
   }
   
 }
@@ -2045,7 +2152,7 @@
     font-size: 14px;
   }
 
-  .goods-item__like, .review-seller__where-find {
+  .review-seller__where-find {
     font-size: 14px;
   }
 
@@ -2063,9 +2170,6 @@
 
   .seller-profile__name {
     font-size: 16px;
-    &:after {
-      right: -31px;
-    }
   }
 
   .seller-profile__label {
@@ -2120,6 +2224,12 @@
   
   .card__label-bottom {
     top: -7px;
+  }
+}
+
+@media(max-width:515px) {
+  .card-categories__price {
+    font-size: 16px;
   }
 }
 
@@ -2232,7 +2342,18 @@
     font-size: 15px;
   }
 
-  
+  .card-categories__item {
+    width: 100%;
+  }
+
+  .card-categories__price {
+    font-size: 18px;
+  }
+
+  .card-categories__list li {
+    font-size: 16px;
+    margin-right: 10px;
+  }
 
 }
 

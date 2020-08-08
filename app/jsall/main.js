@@ -1,7 +1,7 @@
 "use strict"
 
 $(document).ready(function() {
-
+    
     // Burger menu
     $('.burger-wrap').click(function(event) {
 		$('.burger-wrap, .header__menu, .header__shadow, html').toggleClass('active'); 
@@ -69,7 +69,6 @@ $(document).ready(function() {
     });
 
 
-
     // hover tooltip goods-buy more
     $('.goods-buy__price-more-img').mouseover(function(){
         $('.goods-buy__tooltip-more').addClass('active');
@@ -91,6 +90,17 @@ $(document).ready(function() {
         $('.goods-buy__price-more-img').removeClass('active');
     });
 
+
+    // hover categories item
+
+    $('.card-categories__item').mouseover(function(){
+        $(this).addClass("active");
+        $(this).children(".card-categories__descr").addClass("active");
+    });
+    $('.card-categories__item').mouseout(function(){
+        $(this).removeClass("active");
+        $(this).children(".card-categories__descr").removeClass("active");
+    });
 
     
 
@@ -206,10 +216,10 @@ $(document).ready(function() {
 
     });
 
-       
-        
+               
 
 });
+
 
 // ширина блока комментов зависит от ширины слайдера
 // если данный элемент есть на загруженной странице то запускаем код
@@ -228,18 +238,16 @@ function widthComments() {
 
 widthComments();
 
-// запуск данной данной функции при смене ширины браузера
-window.onresize = function(event) {
-    widthComments();
-};
+// запуск данной функции при смене ширины браузера
+window.addEventListener("resize", widthComments);
 
 
 
-// Select Categories
+// filter для всех фильтров на всех страницах
 
 let select = function () {
-    let selectHeader = document.querySelectorAll('.select-categories__header');
-    let selectItem = document.querySelectorAll('.select-categories__item');
+    let selectHeader = document.querySelectorAll('.filter__header');
+    let selectItem = document.querySelectorAll('.filter__item');
 
     selectHeader.forEach(item => {
         item.addEventListener('click', selectToggle)
@@ -255,11 +263,13 @@ let select = function () {
 
     function selectChoose() {
         let text = this.innerText,
-        select = this.closest('.select-categories'),
-        currentText = select.querySelector('.select-categories__current');
+        select = this.closest('.filter-wrap'),
+        arrow = select.querySelector('.filter__icon'),
+        currentText = select.querySelector('.filter__current');
+        arrow.style.backgroundPosition = "0 9px";
         currentText.innerText = text;
+        currentText.style.color = "#FE6C61";
         select.classList.remove('is-active');
-
     }
 
 };
@@ -268,88 +278,52 @@ select();
 
 
 
-// Select Name
-
-let select2 = function () {
-    let selectHeader2 = document.querySelectorAll('.select-name__header');
-    let selectItem2 = document.querySelectorAll('.select-name__item');
-
-    selectHeader2.forEach(item => {
-        item.addEventListener('click', selectToggle2)
-    });
-
-    selectItem2.forEach(item => {
-        item.addEventListener('click', selectChoose2)
-    });
-
-    function selectToggle2() {
-        this.parentElement.classList.toggle('is-active');
-    }
-
-    function selectChoose2() {
-        let text2 = this.innerText,
-        select2 = this.closest('.select-name'),
-        currentText2 = select2.querySelector('.select-name__current');
-        currentText2.innerText = text2;
-        select2.classList.remove('is-active');
-
-    }
-
-};
-
-select2();
-
-
-
-
-// Simplebar нестандартный скролл для товара
+// Simplebar нестандартный скролл для товара 
+// с проверкой есть ли на загруженной странице элемент к котору нужно подключить simplebar иначе будет ошибка
 if (document.getElementById('goods-buy_scroll')) {
     new SimpleBar(document.getElementById('goods-buy_scroll'), {
-        autoHide: false,  // чтобы ползунок не пропадал
-        scrollbarMaxSize: 100 // максимальная высота ползунка
+        autoHide: false,  
+        scrollbarMaxSize: 100 
     });
 }
 
 // Simplebar нестандартный скролл для отзывов
 if (document.getElementById('reviews-popup_scroll')) {
     new SimpleBar(document.getElementById('reviews-popup_scroll'), {
-        autoHide: false,  // чтобы ползунок не пропадал
-        scrollbarMaxSize: 100 // максимальная высота ползунка
+        autoHide: false,  
+        scrollbarMaxSize: 100 
     });
 }
 
 // Simplebar нестандартный скролл для совместных покупок
 if (document.getElementById('together-popup_scroll')) {
     new SimpleBar(document.getElementById('together-popup_scroll'), {
-        autoHide: false,  // чтобы ползунок не пропадал
-        scrollbarMaxSize: 100 // максимальная высота ползунка
+        autoHide: false,  
+        scrollbarMaxSize: 100 
     });
 }
 
 // Simplebar нестандартный скролл для описания товара
 if (document.getElementById('details-popup_scroll')) {
     new SimpleBar(document.getElementById('details-popup_scroll'), {
-        autoHide: false,  // чтобы ползунок не пропадал
-        scrollbarMaxSize: 100 // максимальная высота ползунка
+        autoHide: false,  
+        scrollbarMaxSize: 100 
     });
 }
 
 // Simplebar нестандартный скролл для добавления поста авторизованному пользователю
 if (document.getElementById('post-popup_scroll')) {
     new SimpleBar(document.getElementById('post-popup_scroll'), {
-        autoHide: false,  // чтобы ползунок не пропадал
-        scrollbarMaxSize: 100 // максимальная высота ползунка
+        autoHide: false,  
+        scrollbarMaxSize: 100 
     });
 }
-
 
 // Simplebar нестандартный скролл для публикации продавца
 if (document.getElementById('review-seller__goods_scroll') && window.innerWidth > 665) {
-    document.getElementById('review-seller__goods_scroll').setAttribute("data-simplebar", "init");
     new SimpleBar(document.getElementById('review-seller__goods_scroll'), {
-        autoHide: false,  // чтобы ползунок не пропадал
-        scrollbarMaxSize: 100 // максимальная высота ползунка
+        autoHide: false,
+        scrollbarMaxSize: 100
     });
 }
-
 
