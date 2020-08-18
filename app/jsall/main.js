@@ -177,9 +177,21 @@ $(document).ready(function() {
         $('.reviews-popup, .button-bottom, .button-bottom__reviews-cross, .popup-opacity, .header, html').addClass('active');
         
     });
-    
+
+        
     $('.button-bottom__reviews-cross').click(function(){
         $('.reviews-popup, .button-bottom, .button-bottom__reviews-cross, .popup-opacity, .header, html').removeClass('active');
+
+    });
+
+    // btn popup win tff
+    $('.app-resalts').click(function(){
+        $('.win-popup, .button-bottom, .button-bottom__reviews-cross, .popup-opacity, .header, html').addClass('active');
+        
+    });
+
+    $('.button-bottom__reviews-cross').click(function(){
+        $('.win-popup, .button-bottom, .button-bottom__reviews-cross, .popup-opacity, .header, html').removeClass('active');
 
     });
 
@@ -326,4 +338,208 @@ if (document.getElementById('review-seller__goods_scroll') && window.innerWidth 
         scrollbarMaxSize: 100
     });
 }
+
+// Simplebar нестандартный скролл для победителей tff
+if (document.getElementById('win-popup_scroll')) {
+    new SimpleBar(document.getElementById('win-popup_scroll'), {
+        autoHide: false,  
+        scrollbarMaxSize: 100 
+    });
+}
+
+
+
+// оформление заказа
+
+
+
+let btnStep1 = document.querySelector('.btn-step1');
+
+let name,
+    phone,
+    email;
+
+// проверка есть ли данный элемент на открывшейся странице, иначе будет ошибка, 
+// и ниже написанный код для других страниц работать не будет
+if (btnStep1) {
+    
+    btnStep1.addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('name').style.border = "none";
+        document.getElementById('phone').style.border = "none";
+        document.getElementById('email').style.border = "none";
+        name = document.getElementById('name').value;
+        phone = document.getElementById('phone').value;
+        email = document.getElementById('email').value;
+        if (name && phone && email) {
+            document.querySelector('.ordering__step-1').style.display = "none";
+            document.querySelector('.step-span1').classList.remove('active');
+            document.querySelector('.ordering__step-2').style.display = "block";
+            document.querySelector('.step-span2').classList.add('active');
+        }
+        else {
+            if (!name) {
+                document.getElementById('name').style.border = "1px solid #FE6C61";
+            }
+            if (!phone) {
+                document.getElementById('phone').style.border = "1px solid #FE6C61";
+            }
+            if (!email) {
+                document.getElementById('email').style.border = "1px solid #FE6C61";
+            }
+        }
+    
+
+    });
+
+}
+
+let btnStep2 = document.querySelector('.btn-step2');
+let back2 = document.querySelector('.btn-back-2');
+
+let region,
+    index,
+    city,
+    street,
+    home,
+    flat;
+
+if (btnStep2) {
+    
+    btnStep2.addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('region').style.border = "none";
+        document.getElementById('index').style.border = "none";
+        document.getElementById('city').style.border = "none";
+        document.getElementById('street').style.border = "none";
+        document.getElementById('home').style.border = "none";
+        document.getElementById('flat').style.border = "none";
+        region = document.getElementById('region').value;
+        index = document.getElementById('index').value;
+        city = document.getElementById('city').value;
+        street = document.getElementById('street').value;
+        home = document.getElementById('home').value;
+        flat = document.getElementById('flat').value;
+
+        document.querySelector('.step3-region-wrap').style.display = "";
+        document.querySelector('.step3-index-wrap').style.display = "";
+        document.querySelector('.step3-city-wrap').style.display = "";
+        document.querySelector('.step3-street-wrap').style.display = "";
+        document.querySelector('.step3-home-wrap').style.display = "";
+        document.querySelector('.step3-flat-wrap').style.display = "";
+
+        document.querySelector('.step3-pickup').style.display = "";
+        document.querySelector('.step3-delivery').style.display = "";
+
+        if ( (region && index && city && street && home && flat) || (document.querySelector('.ordering__step2-pickup .ordering__step2-circul').classList.contains('active')) ) {
+            if ( document.querySelector('.ordering__step2-pickup .ordering__step2-circul').classList.contains('active') ) {
+                document.querySelector('.ordering__step-2').style.display = "none";
+                document.querySelector('.step-span2').classList.remove('active');
+                document.querySelector('.ordering__step-3').style.display = "block";
+                document.querySelector('.step-span3').classList.add('active');
+                document.querySelector('.step3-name').innerHTML = name;
+                document.querySelector('.step3-phone').innerHTML = phone;
+                document.querySelector('.step3-email').innerHTML = email;
+                document.querySelector('.step3-delivery').style.display = "none";
+
+                document.querySelector('.step3-region-wrap').style.display = "none";
+                document.querySelector('.step3-index-wrap').style.display = "none";
+                document.querySelector('.step3-city-wrap').style.display = "none";
+                document.querySelector('.step3-street-wrap').style.display = "none";
+                document.querySelector('.step3-home-wrap').style.display = "none";
+                document.querySelector('.step3-flat-wrap').style.display = "none";
+            }
+            else {
+                document.querySelector('.ordering__step-2').style.display = "none";
+                document.querySelector('.step-span2').classList.remove('active');
+                document.querySelector('.ordering__step-3').style.display = "block";
+                document.querySelector('.step-span3').classList.add('active');
+                document.querySelector('.step3-name').innerHTML = name;
+                document.querySelector('.step3-phone').innerHTML = phone;
+                document.querySelector('.step3-email').innerHTML = email;
+                document.querySelector('.step3-pickup').style.display = "none";
+
+                document.querySelector('.step3-region').innerHTML = region;
+                document.querySelector('.step3-index').innerHTML = index;
+                document.querySelector('.step3-city').innerHTML = city;
+                document.querySelector('.step3-street').innerHTML = street;
+                document.querySelector('.step3-home').innerHTML = home;
+                document.querySelector('.step3-flat').innerHTML = flat;
+            } 
+
+        }
+        else {
+            if (!region) {
+                document.getElementById('region').style.border = "1px solid #FE6C61";
+            }
+            if (!index) {
+                document.getElementById('index').style.border = "1px solid #FE6C61";
+            }
+            if (!city) {
+                document.getElementById('city').style.border = "1px solid #FE6C61";
+            }
+            if (!street) {
+                document.getElementById('street').style.border = "1px solid #FE6C61";
+            }
+            if (!home) {
+                document.getElementById('home').style.border = "1px solid #FE6C61";
+            }
+            if (!flat) {
+                document.getElementById('flat').style.border = "1px solid #FE6C61";
+            }
+        }
+
+    });
+}
+
+
+let btnBack2 = document.querySelector('.btn-back-2');
+
+if (btnBack2) {
+
+    btnBack2.addEventListener('click', function(event) {
+        event.preventDefault();
+        document.querySelector('.ordering__step-2').style.display = "none";
+        document.querySelector('.step-span2').classList.remove('active');
+        document.querySelector('.ordering__step-1').style.display = "block";
+        document.querySelector('.step-span1').classList.add('active');
+    });
+}
+
+let btnBack3 = document.querySelector('.btn-back-3');
+
+if (btnBack3) {
+
+    btnBack3.addEventListener('click', function(event) {
+        event.preventDefault();
+        document.querySelector('.ordering__step-3').style.display = "none";
+        document.querySelector('.step-span3').classList.remove('active');
+        document.querySelector('.ordering__step-2').style.display = "block";
+        document.querySelector('.step-span2').classList.add('active');
+    });
+}
+
+
+let delivery = document.querySelector(".ordering__step2-delivery");
+let pickup = document.querySelector(".ordering__step2-pickup");
+
+if (delivery) {
+
+    delivery.addEventListener('click', function() {
+        document.querySelector('.pickup-wrap').style.display = "none";
+        document.querySelector('.ordering__step2').style.display = "block";
+        document.querySelector('.ordering__step2-delivery .ordering__step2-circul').classList.add('active');
+        document.querySelector('.ordering__step2-pickup .ordering__step2-circul').classList.remove('active');
+    });
+}
+
+if (pickup) {
+    pickup.addEventListener('click', function() {
+        document.querySelector('.ordering__step2').style.display = "none";
+        document.querySelector('.pickup-wrap').style.display = "block";
+        document.querySelector('.ordering__step2-pickup .ordering__step2-circul').classList.add('active');
+        document.querySelector('.ordering__step2-delivery .ordering__step2-circul').classList.remove('active');
+    });
+}
+
 
