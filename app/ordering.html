@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>ordering</title>
+	<link rel="icon" href="#">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+	<!-- шапка -->
+	<header class="header">
+		<div class="section">
+			<div class="header__wrap">
+				<div class="header__logo">
+					<a class="logo-img" href="index.html"><img src="img/v-prog.png" alt=""></a>
+					<a class="logo-img-small" href="index.html"><img src="img/v-progSmall.png" alt=""></a>
+				</div>
+				<div class="burger-wrap">
+					<span> </span>
+				</div>
+				<div class="header__menu">
+					<ul class="header__list">
+						<li class="header__items"><a href="#">магазины</a></li>
+						<li class="header__items"><a href="#">совместные покупки</a></li>
+						<li class="header__items"><a href="testforfree.html">test for free</a></li>
+						<li class="header__items"><a href="bloggers.html">блогеры</a></li>
+						<li class="header__items"><a href="publications.html">публикации</a></li>
+					</ul>
+				</div>
+				<div class="header__shadow"></div>
+			</div>
+		</div>
+	</header>
+
+	<!-- меню (категории) -->
+	<div class="menu">
+		<div class="section">
+			<div class="menu__wrap">
+				<div class="section-inner">
+					<div class="menu__rating">
+						Мой рейтинг: <span class="menu__rating-number">0</span>
+					</div>
+					<div class="menu__categories">
+						<div class="menu__catalog">
+							<div class="menu__catalog-btn">
+								<div class="menu__catalog-name">Каталог товаров</div> <span></span>
+							</div>
+						</div>
+						<ul class="menu__list">
+							<li class="menu__items"><a href="#">женщинам</a></li>
+							<li class="menu__items"><a href="#">мужчинам</a></li>
+							<li class="menu__items"><a href="#">детям</a></li>
+							<li class="menu__items"><a href="#">для дома</a></li>
+							<li class="menu__items"><a href="#">красота и здоровье</a></li>
+							<li class="menu__items"><a href="#">спорт и развлечения</a></li>
+							<li class="menu__items"><a href="#">техника и электроника</a></li>
+							<li class="menu__items"><a href="#">другое</a></li>
+						</ul>
+						<div class="menu__icons-wrap">
+							<span class="label-post">Запостить</span>
+							<ul class="menu__list-icons">
+								<li class="menu__list-icons-items menu__search"></li>
+								<li class="menu__list-icons-items menu__camera"></li>
+								<li class="menu__list-icons-items menu__heart"><span class="label-icons label-icons-heart">0</span></li>
+								<li class="menu__list-icons-items menu__bag"><span class="label-icons label-icons-bag">0</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+
+
+	<!-- Оформление заказа -->
+
+	<div class="section">
+		<section class="content">
+			<div class="section-inner">
+				<div class="ordering">
+					<div class="ordering__inner">
+						<div class="ordering__steps">
+							<div class="ordering__title">оформление заказа</div>
+							<div class="ordering__info">
+								<span class="ordering__info-attention">Внимание!</span>
+								Для того чтобы получить скидки и следить за статусами заказов, 
+								Вам необходимо <a href="#">войти</a> или <a href="#">зарегистрироваться.</a>
+							</div>
+
+							<div class="ordering__step-title">
+								<span class="ordering__step-span step-span1 active">Шаг 1.</span> Контактная информация
+							</div>
+							<form class="ordering__step-1" action="#">
+								<div class="ordering__step1-input">
+									<label for="name">ФИО*</label>
+									<input type="text" id="name" required>
+								</div>
+								<div class="ordering__step1-input">
+									<label for="phone">Телефон*</label>
+									<input type="tel" id="phone" required>
+								</div>
+								<div class="ordering__step1-input ordering__step1-input-last">
+									<label for="email">E-mail*</label>
+									<input type="email" id="email" required>
+								</div>
+								<div class="ordering__step-note">* Обязательное поле для заполнения</div>
+								<button class="ordering__btn btn-step1">продолжить</button>
+							</form>
+														
+							<div class="ordering__step-title">
+								<span class="ordering__step-span step-span2">Шаг 2.</span> Способ доставки
+							</div>
+							<div class="ordering__step-2">
+								<div class="ordering__step2-choice">
+									<div class="ordering__step2-delivery">
+										<div class="ordering__step2-circul active">
+											<div class="ordering__step2-circul-small"></div>
+										</div>
+										<div class="ordering__step2-descr">Доставка курьером</div>
+									</div>
+									<div class="ordering__step2-pickup">
+										<div class="ordering__step2-circul">
+											<div class="ordering__step2-circul-small"></div>
+										</div>
+										<div class="ordering__step2-descr">Самовывоз со склада</div>
+									</div>
+								</div>
+								<form class="ordering__step2" action="#">
+									<div class="ordering__step2-input input-region">
+										<label for="region">Регион доставки</label>
+										<input type="text" id="region" placeholder="Москва" required>
+										<div class="ordering__step2-note">
+											Доставка в Ваш регион от <span class="ordering__step2-note-from">X</span> до <span class="ordering__step2-note-to">Y</span>
+										</div>
+									</div>
+									<div class="ordering__step2-wrap">
+										<div class="ordering__step2-input input-index">
+											<label for="index">Индекс</label>
+											<input type="text" id="index" placeholder="119 421" required>
+										</div>
+										<div class="ordering__step2-input input-city">
+											<label for="city">Населенный пункт</label>
+											<input type="text" id="city" required>
+										</div>
+									</div>
+									<div class="ordering__step2-wrap">
+										<div class="ordering__step2-input input-street">
+											<label for="street">Улица</label>
+											<input type="text" id="street" required>
+										</div>
+										<div class="ordering__step2-input input-home">
+											<label for="home">Дом</label>
+											<input type="text" id="home" required>
+										</div>
+										<div class="ordering__step2-input input-flat">
+											<label for="flat">Квартира</label>
+											<input type="text" id="flat" required>
+										</div>
+									</div>
+									<div class="ordering__step-cost">Стоимость доставки: <span class="ordering__step-cost-number">300</span> руб</div>
+								</form>
+								<div class="pickup-wrap">
+									<div class="pickup-wrap__title">
+										<span class="pickup-wrap__title-span">Адрес склада:</span>
+										г. Москва, ул. Ленинский проспект, д.4А
+									</div>
+									<div class="pickup-wrap__ready">
+										Ваш заказ будет подготовлен к самовывозу в течении <span class="pickup-wrap__ready-from">X</span>-<span class="pickup-wrap__ready-to">Y</span> дней
+									</div>
+									<div class="pickup-wrap__cost">Стоимость: Бесплатно</div>
+								</div>
+								<button class="ordering__btn btn-step2">продолжить</button>
+								<button class="ordering__btn-back btn-back-2">назад</button>
+							</div>
+
+							<div class="ordering__step-title">
+								<span class="ordering__step-span step-span3">Шаг 3.</span> Подтверждение заказа
+							</div>
+							<div class="ordering__step-3">
+								<div class="step3-table">
+									<table>
+										<tbody>
+											<tr>
+												<td>ФИО</td>
+												<td class="step3-name"></td>
+											</tr>
+											<tr>
+												<td>Телефон</td>
+												<td class="step3-phone"></td>
+											</tr>
+											<tr>
+												<td>E-mail</td>
+												<td class="step3-email"></td>
+											</tr>
+											<tr>
+												<td>Способ доставки</td>
+												<td class="step3-pickup">Самовывоз со склада</td>
+												<td class="step3-delivery">Доставка</td>
+											</tr>
+											<tr class="step3-region-wrap">
+												<td>Регион</td>
+												<td class="step3-region"></td>
+											</tr>
+											<tr class="step3-index-wrap">
+												<td>Индекс</td>
+												<td class="step3-index"></td>
+											</tr>
+											<tr class="step3-city-wrap">
+												<td>Населенный пункт</td>
+												<td class="step3-city"></td>
+											</tr>
+											<tr class="step3-street-wrap">
+												<td>Улица</td>
+												<td class="step3-street"></td>
+											</tr>
+											<tr class="step3-home-wrap">
+												<td>Дом</td>
+												<td class="step3-home"></td>
+											</tr>
+											<tr class="step3-flat-wrap">
+												<td>Квартира</td>
+												<td class="step3-flat"></td>
+											</tr>
+											<tr>
+												<td>Способ оплаты</td>
+												<td>Оплата наличными курьеру</td>
+											</tr>
+											<tr>
+												<td class="item-bold">Сумма</td>
+												<td class="item-bold"><span class="cost">0</span> руб.</td>
+											</tr>
+											<tr>
+												<td class="item-bold">Доставка</td>
+												<td class="item-bold"><span class="cost-delivery">300</span> руб.</td>
+											</tr>
+											<tr>
+												<td class="item-total-left">Итого</td>
+												<td class="item-total"><span class="cost-total">300</span> руб.</td>
+											</tr>
+										</tbody>
+									</table>
+																
+								</div>
+								<div class="step3-wrap_btn">
+									<button class="step3-apply-btn">оформить заказ</button>
+									<button class="ordering__btn-back btn-back-3">назад</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="ordering__goods">
+							<div class="ordering__goods-inner">
+								<div class="ordering__goods-title">
+									<span class="ordering__goods-ammount">1</span>
+									товар (-а/ов) на сумму <span class="ordering__goods-total">0</span> <span>руб.</span>
+								</div>
+
+								<div class="ordering__goods-item item-goods">
+									<div class="item-goods__inner">
+										<div class="item-goods__main">
+											<div class="item-goods__img">
+												<img src="img/slider-item.png" alt="">
+											</div>
+											<div class="item-goods__descr">
+												<div class="item-goods__main-row">
+													<div class="item-goods__row">
+														<a class="item-goods__brand" href="#">Emka Fashion</a>
+														<div class="item-goods__ammount">1</div>
+														<div class="item-goods__total">
+															<span class="item-goods__total-number">0</span> руб.
+														</div>
+													</div>
+													<div class="item-goods__name">Платье PL-591/milisa</div>
+													<div class="item-goods__size">
+														Размер: <span class="item-goods__size-number">44</span>
+													</div>
+												</div>
+												<div class="item-goods__bottom-row">
+													<div class="item-goods__balance">
+														Осталось в наличии: <span class="item-goods__balance-number">2</span> шт
+													</div>
+													<div class="item-goods__del">
+														Удалить
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="ordering__goods-item item-goods">
+									<div class="item-goods__inner">
+										<div class="item-goods__main">
+											<div class="item-goods__img">
+												<img src="img/bloger.jpg" alt="">
+											</div>
+											<div class="item-goods__descr">
+												<div class="item-goods__main-row">
+													<div class="item-goods__row">
+														<a class="item-goods__brand" href="#">Emka Fashion</a>
+														<div class="item-goods__ammount">1</div>
+														<div class="item-goods__total">
+															<span class="item-goods__total-number">0</span> руб.
+														</div>
+													</div>
+													<div class="item-goods__name">Платье PL-591/milisa</div>
+													<div class="item-goods__size">
+														Размер: <span class="item-goods__size-number">44</span>
+													</div>
+												</div>
+												<div class="item-goods__bottom-row">
+													<div class="item-goods__balance">
+														Осталось в наличии: <span class="item-goods__balance-number">2</span> шт
+													</div>
+													<div class="item-goods__del">
+														Удалить
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>	
+	</div>
+
+	
+
+
+	<!-- popup прозрачный темный слой -->
+
+	<div class="popup-opacity">
+		
+	</div>
+
+
+	<!-- Боковые и нижняя кнопки -->
+
+	<div class="button-entry">
+		<div class="button-entry__text">Вход/Регистрация</div>
+	</div>
+
+	<div class="left">
+		<div class="button-mobile">
+			<div class="button-mobile__btn"> 
+				<img src="img/user.svg" alt=""> 
+			</div> 
+		</div>
+	</div>
+	
+
+	<div class="button-contact">
+		<div class="button-contact__text">Контакты/Инструкция</div>
+	</div>
+
+	
+	<div class="right">
+		<div class="button-mobile-right">
+			<div class="button-mobile-right__btn"> 
+				<img src="img/telephone.svg" alt=""> 
+			</div> 
+		</div>
+	</div>
+	
+
+	<div class="button-bottom">
+		<div class="button-bottom__reviews-cross"></div>
+	</div>	
+
+
+
+
+	<!-- Окна авторизации и контактов -->
+
+	<div class="sign">
+		<div class="sign__inner">
+			<div class="sign__entry">
+				<div class="sign__title">вход</div>
+				<form action="" class="sign__form">
+					<input name="name" type="text" class="sign__mail" placeholder="E-mail">
+					<input name="pass" type="password" class="sign__password" placeholder="Пароль">
+					<div class="sign__forgot">Забыли пароль?</div>
+					<button class="sign__button" type="submit">Войти</button>
+				</form>
+				<a class="sign__registry" href="#">регистрация</a>
+			</div>
+			<div class="sign__right">
+				<div class="sign__cancel">
+					<div class="cross-wrap">
+						<div class="sign__cross cross"></div>
+					</div>
+				</div>
+				<div class="sign__opacity"></div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="contact">
+		<div class="contact__inner">
+			<div class="contact__left">
+				<div class="contact__opacity"></div>
+				<div class="contact__cancel">
+					<div class="cross-wrap">
+						<div class="contact__cross cross"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="contact__main">
+				<div class="contact__address">
+					<div class="contact__title">
+						центральный офис
+					</div>
+					<div class="contact__map"> 
+						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A537fae7c168826971fda4be15fc49e507e7378b4120e7181ce22ba085fc788eb&amp;max-width=250&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
+					</div>
+					<div class="contact__map-small"> 
+						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A537fae7c168826971fda4be15fc49e507e7378b4120e7181ce22ba085fc788eb&amp;max-width=460&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
+					</div>  
+					<div class="contact__text">
+						<div class="contact__street">г. Москва, Ленинский проспект, д. 4а</div> 
+						<div class="contact__nubmer1">+7 495 722-99-48</div>
+						<div class="contact__nubmer2">8 800 123-45-67</div>
+					</div>
+				</div>
+
+				<div class="contact__about">
+					<ul class="contact__list">
+						<li class="contact__list-item"><a href="#">оплата, доставка и возврат</a></li>
+						<li class="contact__list-item"><a href="#">инструкция пользователю</a></li>
+						<li class="contact__list-item"><a href="#">пользовательское соглашение</a></li>
+						<li class="contact__list-item"><a href="#">стать партнером</a></li>
+						<li class="contact__list-item"><a href="#">часто задаваемые вопросы</a></li>
+					</ul>
+					<div class="contact__button">свяжитесть с нами!</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

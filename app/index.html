@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>ordering</title>
+	<title>shops</title>
 	<link rel="icon" href="#">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -23,7 +23,7 @@
 				</div>
 				<div class="header__menu">
 					<ul class="header__list">
-						<li class="header__items"><a href="#">магазины</a></li>
+						<li class="header__items header_active"><a href="#">магазины</a></li>
 						<li class="header__items"><a href="#">совместные покупки</a></li>
 						<li class="header__items"><a href="testforfree.html">test for free</a></li>
 						<li class="header__items"><a href="bloggers.html">блогеры</a></li>
@@ -36,7 +36,7 @@
 	</header>
 
 	<!-- меню (категории) -->
-	<div class="menu">
+	<div class="menu shops-page">
 		<div class="section">
 			<div class="menu__wrap">
 				<div class="section-inner">
@@ -69,277 +69,220 @@
 							</ul>
 						</div>
 					</div>
+					<div class="select">
+						<div class="select__page">
+							<a href="#">Главная</a> / <a href="#">Магазины</a>
+						</div>
+						<div class="select__wrap">
+							<div class="select__title">
+								<a href="#" class="select__back"></a> Магазины 
+								<span class="select__numbers-account">75 торговых площадок</span>
+								<div class="select__filter">Фильтры <span class="label-icons">0</span></div>
+							</div>
+							<div class="select-choose-wrap select-shops">
+								<div class="select-categories filter-wrap">
+									<div class="select-categories__header filter__header">
+										<span class="select-categories__current filter__current">Категория 1</span>
+										<div class="select-categories__icon filter__icon"></div>
+									</div>
+									<div class="select-categories__body filter__body">
+										<div class="select-categories__item filter__item">Категория 1</div>
+										<div class="select-categories__item filter__item">Категория 2</div>
+										<div class="select-categories__item filter__item">Категория 3</div>
+										<div class="select-categories__item filter__item">Категория 4</div>
+										<div class="select-categories__item filter__item">Категория 5</div>
+									</div>
+								</div>
+								<div class="select-name filter-wrap">
+									<div class="select-name__header filter__header">
+										<span class="select-name__current filter__current">По названию</span>
+										<div class="select-name__icon filter__icon"></div>
+									</div>
+									<div class="select-name__body filter__body">
+										<div class="select-name__item filter__item">По названию</div>
+										<div class="select-name__item filter__item">По размеру скидки в совместных покупках</div>
+										<div class="select-name__item filter__item">По макс. размеру индивидуальной скидки</div>
+										<div class="select-name__item filter__item">По колличеству test for free</div>
+									</div>
+								</div>
+								<div class="select-find">
+									<div class="select-find__input-wrap">
+										<input class="select-find__input" type="text" name="input" placeholder="Введите поисковый запрос">
+									</div>
+									<button type="submit" class="select-find__button">поиск</button>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>	
 		</div>
 	</div>
 
 
-	<!-- Оформление заказа -->
-
+	
+	<!-- Основной контент -->
+	
 	<div class="section">
-		<section class="content">
+		<section class="shops">
 			<div class="section-inner">
-				<div class="ordering">
-					<div class="ordering__inner">
-						<div class="ordering__steps">
-							<div class="ordering__title">оформление заказа</div>
-							<div class="ordering__info">
-								<span class="ordering__info-attention">Внимание!</span>
-								Для того чтобы получить скидки и следить за статусами заказов, 
-								Вам необходимо <a href="#">войти</a> или <a href="#">зарегистрироваться.</a>
-							</div>
+				<div class="shops__inner">
 
-							<div class="ordering__step-title">
-								<span class="ordering__step-span step-span1 active">Шаг 1.</span> Контактная информация
-							</div>
-							<form class="ordering__step-1" action="#">
-								<div class="ordering__step1-input">
-									<label for="name">ФИО*</label>
-									<input type="text" id="name" required>
-								</div>
-								<div class="ordering__step1-input">
-									<label for="phone">Телефон*</label>
-									<input type="tel" id="phone" required>
-								</div>
-								<div class="ordering__step1-input ordering__step1-input-last">
-									<label for="email">E-mail*</label>
-									<input type="email" id="email" required>
-								</div>
-								<div class="ordering__step-note">* Обязательное поле для заполнения</div>
-								<button class="ordering__btn btn-step1">продолжить</button>
-							</form>
-														
-							<div class="ordering__step-title">
-								<span class="ordering__step-span step-span2">Шаг 2.</span> Способ доставки
-							</div>
-							<div class="ordering__step-2">
-								<div class="ordering__step2-choice">
-									<div class="ordering__step2-delivery">
-										<div class="ordering__step2-circul active">
-											<div class="ordering__step2-circul-small"></div>
-										</div>
-										<div class="ordering__step2-descr">Доставка курьером</div>
-									</div>
-									<div class="ordering__step2-pickup">
-										<div class="ordering__step2-circul">
-											<div class="ordering__step2-circul-small"></div>
-										</div>
-										<div class="ordering__step2-descr">Самовывоз со склада</div>
+					<div class="shops-item">
+						<div class="shops-item__inner">
+							<div class="shops-item__top">
+								<div class="shops-item__title">
+									<div class="shops-item__name">La Vallee</div>
+									<div class="shops-item__categories">
+										<span>Категории:</span> Уход за лицом / Уход за телом / Уход за волосами ...
 									</div>
 								</div>
-								<form class="ordering__step2" action="#">
-									<div class="ordering__step2-input input-region">
-										<label for="region">Регион доставки</label>
-										<input type="text" id="region" placeholder="Москва" required>
-										<div class="ordering__step2-note">
-											Доставка в Ваш регион от <span class="ordering__step2-note-from">X</span> до <span class="ordering__step2-note-to">Y</span>
-										</div>
-									</div>
-									<div class="ordering__step2-wrap">
-										<div class="ordering__step2-input input-index">
-											<label for="index">Индекс</label>
-											<input type="text" id="index" placeholder="119 421" required>
-										</div>
-										<div class="ordering__step2-input input-city">
-											<label for="city">Населенный пункт</label>
-											<input type="text" id="city" required>
-										</div>
-									</div>
-									<div class="ordering__step2-wrap">
-										<div class="ordering__step2-input input-street">
-											<label for="street">Улица</label>
-											<input type="text" id="street" required>
-										</div>
-										<div class="ordering__step2-input input-home">
-											<label for="home">Дом</label>
-											<input type="text" id="home" required>
-										</div>
-										<div class="ordering__step2-input input-flat">
-											<label for="flat">Квартира</label>
-											<input type="text" id="flat" required>
-										</div>
-									</div>
-									<div class="ordering__step-cost">Стоимость доставки: <span class="ordering__step-cost-number">300</span> руб</div>
-								</form>
-								<div class="pickup-wrap">
-									<div class="pickup-wrap__title">
-										<span class="pickup-wrap__title-span">Адрес склада:</span>
-										г. Москва, ул. Ленинский проспект, д.4А
-									</div>
-									<div class="pickup-wrap__ready">
-										Ваш заказ будет подготовлен к самовывозу в течении <span class="pickup-wrap__ready-from">X</span>-<span class="pickup-wrap__ready-to">Y</span> дней
-									</div>
-									<div class="pickup-wrap__cost">Стоимость: Бесплатно</div>
-								</div>
-								<button class="ordering__btn btn-step2">продолжить</button>
-								<button class="ordering__btn-back btn-back-2">назад</button>
-							</div>
-
-							<div class="ordering__step-title">
-								<span class="ordering__step-span step-span3">Шаг 3.</span> Подтверждение заказа
-							</div>
-							<div class="ordering__step-3">
-								<div class="step3-table">
-									<table>
-										<tbody>
-											<tr>
-												<td>ФИО</td>
-												<td class="step3-name"></td>
-											</tr>
-											<tr>
-												<td>Телефон</td>
-												<td class="step3-phone"></td>
-											</tr>
-											<tr>
-												<td>E-mail</td>
-												<td class="step3-email"></td>
-											</tr>
-											<tr>
-												<td>Способ доставки</td>
-												<td class="step3-pickup">Самовывоз со склада</td>
-												<td class="step3-delivery">Доставка</td>
-											</tr>
-											<tr class="step3-region-wrap">
-												<td>Регион</td>
-												<td class="step3-region"></td>
-											</tr>
-											<tr class="step3-index-wrap">
-												<td>Индекс</td>
-												<td class="step3-index"></td>
-											</tr>
-											<tr class="step3-city-wrap">
-												<td>Населенный пункт</td>
-												<td class="step3-city"></td>
-											</tr>
-											<tr class="step3-street-wrap">
-												<td>Улица</td>
-												<td class="step3-street"></td>
-											</tr>
-											<tr class="step3-home-wrap">
-												<td>Дом</td>
-												<td class="step3-home"></td>
-											</tr>
-											<tr class="step3-flat-wrap">
-												<td>Квартира</td>
-												<td class="step3-flat"></td>
-											</tr>
-											<tr>
-												<td>Способ оплаты</td>
-												<td>Оплата наличными курьеру</td>
-											</tr>
-											<tr>
-												<td class="item-bold">Сумма</td>
-												<td class="item-bold"><span class="cost">0</span> руб.</td>
-											</tr>
-											<tr>
-												<td class="item-bold">Доставка</td>
-												<td class="item-bold"><span class="cost-delivery">300</span> руб.</td>
-											</tr>
-											<tr>
-												<td class="item-total-left">Итого</td>
-												<td class="item-total"><span class="cost-total">300</span> руб.</td>
-											</tr>
-										</tbody>
-									</table>
-																
-								</div>
-								<div class="step3-wrap_btn">
-									<button class="step3-apply-btn">оформить заказ</button>
-									<button class="ordering__btn-back btn-back-3">назад</button>
+								<div class="shops-item__subscribe">
+									<div class="shops-item__share"></div>
+									<div class="shops-item__btn">подписаться</div>
 								</div>
 							</div>
+							<a class="shops-item__logo" href="shops-inner.html">
+								<img src="img/shops-logo.png" alt="">
+								<div class="shops-labels">
+									<div class="shops-labels__goods">
+										Товаров: <span class="shops-labels__goods-number">35</span>
+									</div>
+									<div class="shops-labels__followers">
+										Подписчиков: <span class="shops-labels__followers-number">1</span>
+									</div>
+									<div class="shops-labels__sp">
+										Совместных покупок: <span class="shops-labels__sp-number">0</span>
+									</div>
+									<div class="shops-labels__tff">
+										Test for free: <span class="shops-labels__tff-number">0</span>
+									</div>
+								</div>
+							</a>
 						</div>
+					</div>
 
-						<div class="ordering__goods">
-							<div class="ordering__goods-inner">
-								<div class="ordering__goods-title">
-									<span class="ordering__goods-ammount">1</span>
-									товар (-а/ов) на сумму <span class="ordering__goods-total">0</span> <span>руб.</span>
-								</div>
-
-								<div class="ordering__goods-item item-goods">
-									<div class="item-goods__inner">
-										<div class="item-goods__main">
-											<div class="item-goods__img">
-												<img src="img/slider-item.png" alt="">
-											</div>
-											<div class="item-goods__descr">
-												<div class="item-goods__main-row">
-													<div class="item-goods__row">
-														<a class="item-goods__brand" href="#">Emka Fashion</a>
-														<div class="item-goods__ammount">1</div>
-														<div class="item-goods__total">
-															<span class="item-goods__total-number">0</span> руб.
-														</div>
-													</div>
-													<div class="item-goods__name">Платье PL-591/milisa</div>
-													<div class="item-goods__size">
-														Размер: <span class="item-goods__size-number">44</span>
-													</div>
-												</div>
-												<div class="item-goods__bottom-row">
-													<div class="item-goods__balance">
-														Осталось в наличии: <span class="item-goods__balance-number">2</span> шт
-													</div>
-													<div class="item-goods__del">
-														Удалить
-													</div>
-												</div>
-											</div>
-										</div>
+					<div class="shops-item">
+						<div class="shops-item__inner">
+							<div class="shops-item__top">
+								<div class="shops-item__title">
+									<div class="shops-item__name">La Vallee</div>
+									<div class="shops-item__categories">
+										<span>Категории:</span> Уход за лицом / Уход за телом / Уход за волосами ...
 									</div>
 								</div>
-
-								<div class="ordering__goods-item item-goods">
-									<div class="item-goods__inner">
-										<div class="item-goods__main">
-											<div class="item-goods__img">
-												<img src="img/bloger.jpg" alt="">
-											</div>
-											<div class="item-goods__descr">
-												<div class="item-goods__main-row">
-													<div class="item-goods__row">
-														<a class="item-goods__brand" href="#">Emka Fashion</a>
-														<div class="item-goods__ammount">1</div>
-														<div class="item-goods__total">
-															<span class="item-goods__total-number">0</span> руб.
-														</div>
-													</div>
-													<div class="item-goods__name">Платье PL-591/milisa</div>
-													<div class="item-goods__size">
-														Размер: <span class="item-goods__size-number">44</span>
-													</div>
-												</div>
-												<div class="item-goods__bottom-row">
-													<div class="item-goods__balance">
-														Осталось в наличии: <span class="item-goods__balance-number">2</span> шт
-													</div>
-													<div class="item-goods__del">
-														Удалить
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
+								<div class="shops-item__subscribe">
+									<div class="shops-item__share"></div>
+									<div class="shops-item__btn">подписаться</div>
 								</div>
-
 							</div>
+							<a class="shops-item__logo" href="shops-inner.html">
+								<img src="img/shops-logo.png" alt="">
+								<div class="shops-labels">
+									<div class="shops-labels__goods">
+										Товаров: <span class="shops-labels__goods-number">35</span>
+									</div>
+									<div class="shops-labels__followers">
+										Подписчиков: <span class="shops-labels__followers-number">1</span>
+									</div>
+									<div class="shops-labels__sp">
+										Совместных покупок: <span class="shops-labels__sp-number">0</span>
+									</div>
+									<div class="shops-labels__tff">
+										Test for free: <span class="shops-labels__tff-number">0</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="shops-item">
+						<div class="shops-item__inner">
+							<div class="shops-item__top">
+								<div class="shops-item__title">
+									<div class="shops-item__name">La Vallee</div>
+									<div class="shops-item__categories">
+										<span>Категории:</span> Уход за лицом / Уход за телом / Уход за волосами ...
+									</div>
+								</div>
+								<div class="shops-item__subscribe">
+									<div class="shops-item__share"></div>
+									<div class="shops-item__btn">подписаться</div>
+								</div>
+							</div>
+							<a class="shops-item__logo" href="shops-inner.html">
+								<img src="img/shops-logo.png" alt="">
+								<div class="shops-labels">
+									<div class="shops-labels__goods">
+										Товаров: <span class="shops-labels__goods-number">35</span>
+									</div>
+									<div class="shops-labels__followers">
+										Подписчиков: <span class="shops-labels__followers-number">1</span>
+									</div>
+									<div class="shops-labels__sp">
+										Совместных покупок: <span class="shops-labels__sp-number">0</span>
+									</div>
+									<div class="shops-labels__tff">
+										Test for free: <span class="shops-labels__tff-number">0</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="shops-item">
+						<div class="shops-item__inner">
+							<div class="shops-item__top">
+								<div class="shops-item__title">
+									<div class="shops-item__name">La Vallee</div>
+									<div class="shops-item__categories">
+										<span>Категории:</span> Уход за лицом / Уход за телом / Уход за волосами ...
+									</div>
+								</div>
+								<div class="shops-item__subscribe">
+									<div class="shops-item__share"></div>
+									<div class="shops-item__btn">подписаться</div>
+								</div>
+							</div>
+							<a class="shops-item__logo" href="shops-inner.html">
+								<img src="img/shops-logo.png" alt="">
+								<div class="shops-labels">
+									<div class="shops-labels__goods">
+										Товаров: <span class="shops-labels__goods-number">35</span>
+									</div>
+									<div class="shops-labels__followers">
+										Подписчиков: <span class="shops-labels__followers-number">1</span>
+									</div>
+									<div class="shops-labels__sp">
+										Совместных покупок: <span class="shops-labels__sp-number">0</span>
+									</div>
+									<div class="shops-labels__tff">
+										Test for free: <span class="shops-labels__tff-number">0</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="view">
+					<div class="view__button">
+						показать еще <span class="view__yet">4</span class="view__from"> из <span>71</span>
+					</div>
+					<div class="view__button-like">
+						<div class="view__arrow">
+							<div class="view__arrow-img"></div>
+						</div>
+						<div class="view__numbers">
+							1
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>	
+		</section>
 	</div>
 
-	
 
-
-	<!-- popup прозрачный темный слой -->
-
-	<div class="popup-opacity">
-		
-	</div>
 
 
 	<!-- Боковые и нижняя кнопки -->
@@ -372,7 +315,7 @@
 	
 
 	<div class="button-bottom">
-		<div class="button-bottom__reviews-cross"></div>
+
 	</div>	
 
 

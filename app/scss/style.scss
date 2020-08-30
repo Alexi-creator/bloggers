@@ -1,4 +1,4 @@
-@import "vars"; // несмотря на то что файл с нижним подчеркиванием здесь пишем без него
+@import "vars"; 
 @import "libs";
 @import "fonts";
 
@@ -511,23 +511,6 @@ html.active2 {
 	padding: 8px;
 }
 
-.select-categories__icon {
-	align-items: center;
-	display: flex;
-	flex-shrink: 0;
-	justify-content: center;
-	height: 10px;
-	margin-left: auto;
-	margin-top: 15px;
-	margin-right: 10px;
-	text-align: center;
-	width: 18px;
-	overflow: hidden;
-	background-image: url(../img/arrow_down.svg);
-	background-position: 0 20px;
-	background-size: cover;
-}
-
 .select-categories__body {
 	border-top: 0;
 	display: none;
@@ -580,23 +563,6 @@ html.active2 {
 	font-size: 14px;
 	line-height: 20px;
 	padding: 8px;
-}
-
-.select-name__icon {
-	align-items: center;
-	display: flex;
-	flex-shrink: 0;
-	justify-content: center;
-	height: 10px;
-	margin-left: auto;
-	margin-top: 15px;
-	margin-right: 10px;
-	text-align: center;
-	width: 18px;
-	overflow: hidden;
-	background-image: url(../img/arrow_down.svg);
-	background-position: 0 20px;
-	background-size: cover;
 }
 
 .select-name__body {
@@ -653,6 +619,7 @@ html.active2 {
 		border: none;
 		border-top: 1px solid #E3E3E3;
 		border-bottom: 1px solid #E3E3E3;
+		border-left: 1px solid #E3E3E3;
 		padding-left: 12px;
 		outline: none;
 		&:hover {
@@ -679,7 +646,7 @@ html.active2 {
 
 /* Основной контент Блогеры */
 
-.content, .goods {
+.content, .goods, .shops {
 	background-color: $main-color;
 }
 
@@ -2768,6 +2735,7 @@ html.active2 {
 	margin-right: 10px;
 	margin-bottom: 5px;
 	border: 1px solid #E3E3E3;
+	overflow: hidden;
 	&:hover {
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	}
@@ -2780,7 +2748,9 @@ html.active2 {
 .filter__header {
 	cursor: pointer;
 	display: flex;
+	height: 100%;
 	background-color: #fff;
+	position: relative;
 	&:hover {
 		background-color: #F9FBFB;
 	}
@@ -2788,27 +2758,26 @@ html.active2 {
 
 .filter__current {
 	font-size: 14px;
-	line-height: 20px;
-	padding: 8px;
+	line-height: 23px;
+	padding-top: 7px;
+	padding-left: 5px;
+	padding-right: 30px;
+	padding-bottom: 7px;
+	width: 100%;
+	line-height: 24px;
 }
 
 .filter__icon {
-	align-items: center;
-	display: flex;
-	flex-shrink: 0;
-	justify-content: center;
+	position: absolute;
+	right: 9px;
+	top: 13px;
 	height: 9px;
-	margin-left: auto;
-	margin-top: 13px;
-	margin-right: 10px;
-	text-align: center;
 	width: 16px;
 	overflow: hidden;
 	background-image: url(../img/arrow_down.svg);
 	background-position: 0 18px;
 	background-size: cover;
 }
-
 
 .filter__body {
 	border-top: 0;
@@ -2878,7 +2847,6 @@ html.active2 {
 .filter-shop {
 	width: 136px;
 }
-
 
 .card-categories__inner {
 	display: flex;
@@ -3594,6 +3562,260 @@ html.active2 {
 .item-goods__balance {
 	min-width: 180px;
 }
+
+
+// shops
+
+.select-shops {
+	.select-categories {
+		min-width: 122px;
+	}
+}
+.shops__inner {
+	max-width: 1080px;
+	width: 100%;
+	margin: 0 auto;
+	font-family: "Fira-Sans";
+	color: $color-text;
+	padding: 0 30px;
+}
+.shops-item {
+	margin-bottom: 50px;
+}
+.shops-item__top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 5px;
+}
+.shops-item__subscribe {
+	display: flex;
+	align-items: center;
+}
+.shops-item__name {
+	font-size: 20px;
+	font-weight: 500;
+	margin-right: 15px;
+}
+.shops-item__categories {
+	font-size: 14px;
+	color: #929396;
+	margin-right: 15px;
+	span {
+		font-weight: 500;
+	}
+}
+.shops-item__share {
+	width: 17px;
+	height: 18px;
+	background-image: url(../img/Share.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	cursor: pointer;
+	&:hover {
+		background-position: 0 -19px;
+	}
+}
+.shops-item__btn {
+	font-family: Bebas;
+	color: #000;
+	font-size: 20px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 7px 20px;
+	border: 2px solid #000;
+	margin-left: 20px;
+	transition: all 0.5s;
+	cursor: pointer;
+	&:hover {
+		color: #fff;
+		background-color: #000;
+	}
+}
+.shops-item__logo {
+	width: 100%;
+	position: relative;
+	img {
+		width: 100%;
+	}
+}
+.shops-labels {
+	position: absolute;
+	display: flex;
+	left: 15px;
+	bottom: 15px;
+	& > div {
+		background-color: $accent-color;
+		color: #fff;
+		font-weight: 500;
+		margin-right: 10px;
+		padding: 5px 10px;
+	}
+}
+
+// shops-inner
+
+.shops-inner.select {
+	padding-bottom: 25px;
+}
+
+.shops-inner {
+	.shops-item {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		margin-bottom: 0;
+	}
+	.shops-item__name {
+		font-size: 24px;
+	}
+	.shops__inner-wrap {
+		width: 100%;
+		background-color: #fff;
+	}
+}
+.shops-menu-top {
+	background-color: $main-color;
+}
+.section-inner {
+	background-color: $main-color;
+}
+.top-memu {
+	padding-top: 30px;
+	padding-bottom: 35px;
+}
+.top-memu__list {
+	display: flex;
+	justify-content: space-between;
+	font-weight: 500;
+	color: #000;
+	font-size: 18px;
+	span {
+		color: $accent-color;
+	}
+}
+.top-memu__list-item {
+	position: relative;
+	cursor: pointer;
+	transition: color 0.3s;
+	&:hover {
+		color: $accent-color;
+		&:after {
+			display: block;
+		}
+	}
+	&:after {
+		display: none;
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 3px;
+		background-color: $accent-color;
+		left: 0;
+		bottom: -5px;
+	}
+	&.active {
+		&:after {
+			display: block;
+		}
+	}
+}
+.shops-goods {
+	display: none;
+	font-family: "Fira-Sans";
+	padding-bottom: 80px;
+	&.active {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+.shops-goods__content {
+	flex-grow: 1;
+}
+.shops-left-menu {
+	flex-basis: 337px;
+}
+.left-menu__title {
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 50px;
+}
+.left-menu__title-number {
+	font-size: 16px;
+	color: #929396;
+	text-transform: lowercase;
+	font-weight: 400;
+}
+.left-menu__list {
+	li {
+		margin-bottom: 15px;
+		&.active {
+			font-weight: 500;
+		}
+	}
+	a {
+		color: #000;
+	}
+}
+.shops-contacts {
+	display: none;
+	padding-top: 10px;
+	font-family: "Fira-Sans";
+	color: $color-text;
+	&.active {
+		display: block;
+	}
+}
+.shops-contacts__table {
+	margin-bottom: 30px;
+}
+.shops-contacts__title {
+	color: $accent-color;
+	margin-bottom: 20px;
+	cursor: pointer;
+	span {
+		display: inline-block;
+    margin-left: 10px;
+    width: 18px;
+    height: 10px;
+    background-image: url(../img/arrow_down.svg);
+    background-repeat: no-repeat;
+    background-position: 0px -10px;
+    background-size: cover;
+	}
+	&.active {
+		span {
+			transform: rotate(180deg);
+		}
+	}
+}
+.shops-contacts__text {
+	display: none;
+	max-width: 630px;
+	&.active {
+		display: block;
+	}
+}
+
+.shops-contacts__table tr td:not(:first-child) {
+	padding-left: 40px;
+}
+.shops-contacts__table {
+	table {
+		border-spacing: 0px 20px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
 
 
 // popup все

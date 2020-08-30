@@ -8775,6 +8775,39 @@ $(document).ready(function() {
 
     });
 
+
+    // btn shops-contacts    
+    $('.shop-goods').click(function(){
+        $('.top-memu__list-item').removeClass('active');
+        $(this).addClass('active');
+        $('.shop-block').removeClass('active');
+        $('.shops-goods').addClass('active');
+    });
+
+    $('.shop-sp').click(function(){
+        $('.top-memu__list-item').removeClass('active');
+        $(this).addClass('active');
+        $('.shop-block').removeClass('active');
+    });
+
+    $('.shop-tff').click(function(){
+        $('.top-memu__list-item').removeClass('active');
+        $(this).addClass('active');
+        $('.shop-block').removeClass('active');
+    });
+
+    $('.shop-followers').click(function(){
+        $('.top-memu__list-item').removeClass('active');
+        $(this).addClass('active');
+        $('.shop-block').removeClass('active');
+    });
+
+    $('.shop-contact').click(function(){
+        $('.top-memu__list-item').removeClass('active');
+        $(this).addClass('active');
+        $('.shop-block').removeClass('active');
+        $('.shops-contacts').addClass('active');
+    });
                
 
 });
@@ -8818,6 +8851,7 @@ let select = function () {
 
     function selectToggle() {
         this.parentElement.classList.toggle('is-active');
+        this.parentElement.style.overflow = "visible";
     }
 
     function selectChoose() {
@@ -8829,6 +8863,7 @@ let select = function () {
         currentText.innerText = text;
         currentText.style.color = "#FE6C61";
         select.classList.remove('is-active');
+        select.style.overflow = "hidden";
     }
 
 };
@@ -8896,7 +8931,7 @@ if (document.getElementById('win-popup_scroll')) {
 
 
 
-// оформление заказа
+// оформление заказа ordering
 
 
 
@@ -9088,5 +9123,24 @@ if (pickup) {
         document.querySelector('.ordering__step2-delivery .ordering__step2-circul').classList.remove('active');
     });
 }
+
+
+
+// Юридическая информация 
+
+let shopInfo = document.querySelector('.shops-contacts__title');
+let infoText = document.querySelector('.shops-contacts__text');
+if (shopInfo) { //  чтобы на других страницах не было ошибки, т.к. данного элемента не будет
+    shopInfo.onclick = function() {
+        infoText.classList.toggle('active');
+        this.classList.toggle('active');
+    }
+}
+
+
+
+
+
+
 
 
