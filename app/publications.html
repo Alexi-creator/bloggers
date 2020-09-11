@@ -80,30 +80,30 @@
 								<div class="select__filter">Фильтры <span class="label-icons">0</span></div>
 							</div>
 							<div class="select-choose-wrap">
-								<div class="select-categories">
-									<div class="select-categories__header">
-										<span class="select-categories__current">Категория</span>
-										<div class="select-categories__icon"></div>
+								<div class="select-categories filter-wrap">
+									<div class="select-categories__header filter__header">
+										<span class="select-categories__current filter__current">Категория</span>
+										<div class="select-categories__icon filter__icon"></div>
 									</div>
-									<div class="select-categories__body">
-										<div class="select-categories__item">Категория 1</div>
-										<div class="select-categories__item">Категория 2</div>
-										<div class="select-categories__item">Категория 3</div>
-										<div class="select-categories__item">Категория 4</div>
-										<div class="select-categories__item">Категория 5</div>
+									<div class="select-categories__body filter__body">
+										<div class="select-categories__item filter__item">Категория 1</div>
+										<div class="select-categories__item filter__item">Категория 2</div>
+										<div class="select-categories__item filter__item">Категория 3</div>
+										<div class="select-categories__item filter__item">Категория 4</div>
+										<div class="select-categories__item filter__item">Категория 5</div>
 									</div>
 								</div>
-								<div class="select-name">
-									<div class="select-name__header">
-										<span class="select-name__current">По имени</span>
-										<div class="select-name__icon"></div>
+								<div class="select-name filter-wrap">
+									<div class="select-name__header filter__header">
+										<span class="select-name__current filter__current">По имени</span>
+										<div class="select-name__icon filter__icon"></div>
 									</div>
-									<div class="select-name__body">
-										<div class="select-name__item">Имя 1</div>
-										<div class="select-name__item">Имя 2</div>
-										<div class="select-name__item">Имя 3</div>
-										<div class="select-name__item">Имя 4</div>
-										<div class="select-name__item">Имя 5</div>
+									<div class="select-name__body filter__body">
+										<div class="select-name__item filter__item">Имя 1</div>
+										<div class="select-name__item filter__item">Имя 2</div>
+										<div class="select-name__item filter__item">Имя 3</div>
+										<div class="select-name__item filter__item">Имя 4</div>
+										<div class="select-name__item filter__item">Имя 5</div>
 									</div>
 								</div>
 								<div class="select-find">
@@ -356,7 +356,7 @@
 				</div>
 				<div class="view">
 					<div class="view__button">
-						показать еще <span class="view__yet">4</span class="view__from"> из <span>71</span>
+						показать еще <span class="view__yet">4</span> из <span class="view__from">71</span>
 					</div>
 					<div class="view__button-like">
 						<div class="view__arrow">
@@ -486,6 +486,7 @@
 
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdn.polyfill.io/v2/polyfill.js?features=Element.prototype.closest"></script> <!-- Это для селектов кастомных чтобы работали методы в IE -->
 	<script src="js/main.js"></script>
 </body>
 </html>

@@ -8872,6 +8872,7 @@ select();
 
 
 
+
 // Simplebar нестандартный скролл для товара 
 // с проверкой есть ли на загруженной странице элемент к котору нужно подключить simplebar иначе будет ошибка
 if (document.getElementById('goods-buy_scroll')) {
@@ -8928,6 +8929,7 @@ if (document.getElementById('win-popup_scroll')) {
         scrollbarMaxSize: 100 
     });
 }
+
 
 
 

@@ -336,7 +336,7 @@ html.active2 {
 	background-image: url(../img/camera.svg);
 	height: 27px;
 	width: 30px;
-	background-position: 0 3px;
+	background-position: 0 2px;
 }
 
 .menu__heart {
@@ -1032,7 +1032,7 @@ html.active2 {
 	margin: 10px auto 0;
 	background-image: url(../img/arrow_red_upanddown.svg);
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 100% 140%;
 	background-position: 0 -20px;
 }
 
@@ -1140,6 +1140,7 @@ html.active2 {
 	cursor: pointer;
 	img {
 		width: 25px;
+		height: 25px;
 		transform: rotate(-90deg);
 		position: relative;
 		left: 0px;
@@ -1156,6 +1157,7 @@ html.active2 {
 	cursor: pointer;
 	img {
 		width: 25px;
+		height: 25px;
 		transform: rotate(90deg);
 		position: relative;
 		left: 0px;
@@ -2776,7 +2778,7 @@ html.active2 {
 	overflow: hidden;
 	background-image: url(../img/arrow_down.svg);
 	background-position: 0 18px;
-	background-size: cover;
+	background-size: 100% 200%;
 }
 
 .filter__body {
@@ -3610,7 +3612,7 @@ html.active2 {
 	height: 18px;
 	background-image: url(../img/Share.svg);
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 100% 200%;
 	background-position: 0 0;
 	cursor: pointer;
 	&:hover {

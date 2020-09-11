@@ -51,7 +51,7 @@ gulp.task('script', function(){					// создаем таск
 gulp.task('js', function() {					// таск для файлов js 
 	return gulp.src([							// подключаем файлы в квадратных скобках т.к. они находятся в разных папках, указываем директории через запатые
 	'node_modules/slick-carousel/slick/slick.js',
-	'node_modules/simplebar/dist/simplebar.js'
+	'node_modules/simplebar/dist/simplebar.js',
 	])
 	.pipe(concat('libs.js'))				// далее эти файлы конкатенируем в один файл с названием libs.min.js
 	.pipe(gulp.dest('app/jsall'))					// и выгружаем в нужную папку которую прописываем

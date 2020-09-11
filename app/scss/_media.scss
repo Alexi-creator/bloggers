@@ -711,12 +711,6 @@
     font-size: 14px;
   }
   
-  .select-categories__icon, .select-name__icon {
-    height: 8px;
-    width: 18px;
-    background-position: 0 18px;
-  }
-
   .select__title {
     width: 150px;
     font-size: 20px;
@@ -1182,6 +1176,11 @@
     }
   }
 
+  //.filter__icon {
+  //  top: 15px;
+  //  background-size: 100% 250%;
+  //}
+
   
 }
 
@@ -1482,13 +1481,7 @@
   .select-categories__item, .select-name__item, .select-find__input {
     font-size: 14px;
   }
-  
-  .select-categories__icon, .select-name__icon {
-    height: 8px;
-    width: 18px;
-    background-position: 0 18px;
-  }
-
+    
   .select-find {
     min-width: 230px;
   }
@@ -2180,7 +2173,7 @@
     margin: 2px;
     background-image: url(../img/arrow_red_upanddown.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 145%;
     background-position: 0 -15px;
   }
   
