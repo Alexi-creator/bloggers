@@ -260,29 +260,25 @@ html.active2 {
 
 .menu__catalog-btn {
 	display: none;
-	width: 175px;
-	height: 40px;
-	font-size: 20px;
-	line-height: 38px;
-	padding-left: 20px;
-	font-family: Bebas;
-	font-weight: 600;
-	border: 2px solid #000;
-	cursor: pointer;
-	position: relative;
-	span {
-		display: block;
-		position: absolute;
-		right: 5px;
-		top: 4px;
-		width: 20px;
-		height: 20px;
-		background-image: url(../img/arrow_down.svg);
-		background-repeat: no-repeat;
-		background-position: 0 10px;
-		
+	.black-btn {
+		&:hover {
+			background-color: transparent;
+			color: #000;
+		}
 	}
 }
+.menu__catalog-btn-arrow {
+	display: inline-block;
+	margin-left: 10px;
+  margin-bottom: 1px;
+  width: 17px;
+  height: 11px;
+  background-image: url(../img/arrow_down.svg);
+  background-repeat: no-repeat;
+  background-position: 0 2px;
+  background-size: cover;
+}
+
 
 .menu__catalog-list {
 	display: none;
@@ -413,7 +409,15 @@ html.active2 {
 .select {
 	margin-top: 20px;
 }
-
+.header-shops {
+	.select__back {
+		display: block;
+		position: relative;
+		left: 0;
+		top: 0;
+		margin-right: 10px;
+	}
+}
 .select__back {
 	display: none;
 	position: absolute;
@@ -454,9 +458,13 @@ html.active2 {
 	margin-top: 15px;
 }
 
+.select__title.title-shops {
+	flex-basis: 250px;
+}
 
 .select__title {
-	width: 20%;
+	flex-basis: 190px;
+	flex-shrink: 0;
 	text-transform: uppercase;
 	font-family: Bebas;
 	font-weight: 900;
@@ -475,6 +483,23 @@ html.active2 {
 
 .select__filter {
 	display: none;
+}
+
+.select__filter {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 12px;
+	color: $accent-color;
+	font-family: Fira-Sans;
+	font-weight: 600;
+	cursor: pointer;
+	text-transform: capitalize;
+	z-index: 5;
+	padding-right: 22px;
+	.label-icons {
+		top: 8px;
+	}
 }
 
 
@@ -541,7 +566,13 @@ html.active2 {
 	position: relative;
 	width: 325px;
 	height: 38px;
-	border: 1px solid #E3E3E3;
+	&.filter-wrap {
+		margin-right: 0;
+		border: none;
+		border-top: 1px solid #E3E3E3;
+		border-left: 1px solid #E3E3E3;
+		border-bottom: 1px solid #E3E3E3;
+	}
 	&:hover {
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	}
@@ -840,9 +871,7 @@ html.active2 {
 .publications__wrap-img {
 	position: relative;
 	display: block;
-	min-height: 280px;
-	height: 410px;
-	padding: 0 0 58% 0;
+	padding: 0 0 104% 0;
 	overflow: hidden;
 }
 
@@ -852,7 +881,7 @@ html.active2 {
 	height: 100%;
 	position: absolute;
 	left: 0;
-	right: 0;
+	top: 0;
 	object-fit: cover;
 }
 
@@ -982,36 +1011,24 @@ html.active2 {
 /* Кнопка показать еще */
 
 .view {
-	width: 100%;
-	font-family: Bebas;
-	font-weight: 400;
-	height: 50px;
+	display: flex;
+	justify-content: center;
+	height: 100px;
+	margin-bottom: 40px;
 	position: relative;
-	padding-bottom: 190px;
 	margin-top: 45px;
+	padding-bottom: 50px;
 }
 
-.view__button {
-	width: 245px;
-	margin: 0 auto;
-	text-align: center;
-	border: 1px solid #000;
-	font-size: 22px;
-	line-height: 50px;
-	cursor: pointer;
-	transition: all 0.5s;
-}
-
-.view__button:hover {
-	background-color: #000;
-	color: #fff;
+.view.active {
+	display: none;
 }
 
 .view__button-like {
 	width: 100px;
 	height: 50px;
 	position: absolute;
-	top: 0;
+	top: 4px;
 	right: 0;
 	background-color: $accent-color;
 	color: #fff;
@@ -1024,6 +1041,9 @@ html.active2 {
 	background-color: #fff;
 	margin: 2px;
 	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .view__arrow-img {
@@ -1037,11 +1057,13 @@ html.active2 {
 }
 
 .view__numbers {
+	font-family: "Fira-Sans";
 	width: 50%;
 	text-align: center;
-	line-height: 50px;
-	font-size: 18px;
-	font-weight: 900;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 22px;
 }
 
 
@@ -1144,7 +1166,7 @@ html.active2 {
 		transform: rotate(-90deg);
 		position: relative;
 		left: 0px;
-    top: -10px;
+    top: -13px;
 	}
 }
 
@@ -1161,7 +1183,7 @@ html.active2 {
 		transform: rotate(90deg);
 		position: relative;
 		left: 0px;
-    top: -10px;
+    top: -13px;
 	}
 }
 
@@ -1189,7 +1211,6 @@ html.active2 {
   padding: 1.5em 1.5em 1em;
   text-decoration: none;
 	margin: 0 3px;
-	
 }
 
 .button-mobile__btn::before, .button-mobile-right__btn::before {
@@ -1201,7 +1222,7 @@ html.active2 {
   left: 0;
   z-index: -1;
   border-bottom: none;
-  border-radius: 10px 10px 0 0;
+  border-radius: 5px 5px 0 0;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, .5);
   transform: perspective(5px) rotateX(1deg);
@@ -1219,7 +1240,7 @@ html.active2 {
 	left: 0;
 	background-color: #fff;
 	height: 59px;
-	z-index: 4;
+	z-index: 6;
 }
 
 .button-bottom.active {
@@ -1569,9 +1590,10 @@ html.active2 {
 }
 
 .goods-menu {
-	width: 19.2%;
+	max-width: 395px;
+	min-width: 290px;
+	margin: 0;
 	padding-left: 0;
-	margin-top: -10px;
 	line-height: 32px;
 	font-family: "Fira-Sans";
 	font-weight: 400;
@@ -1784,7 +1806,6 @@ html.active2 {
 
 .goods-buy__brand {
 	display: flex;
-	align-items: flex-end;
 	justify-content: space-between;
 	margin-bottom: 33px;
 	align-items: center;
@@ -1808,28 +1829,19 @@ html.active2 {
 
 .goods-buy__brand-img {
 	width: 68px;
-	height: 50px;
+	height: 68px;
+	flex-shrink: 0;
 	margin-right: 14px;
 	position: relative;
 	overflow: hidden;
 	img {
-		display: block;
-		width: 100%;
-		height: auto;
+		object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 	}
-}
-
-.goods-buy__btn-subscribe {
-	width: 151px;
-	height: 44px;
-	border: 2px solid #000000;
-	color: #000000;
-	font-family: "Bebas";
-	font-size: 22px;
-	font-weight: 400;
-	line-height: 38px;
-	text-align: center;
-	cursor: pointer;
 }
 
 .goods-buy__select {
@@ -2235,6 +2247,8 @@ html.active2 {
 }
 
 .goods-buy__reviews-title {
+	display: flex;
+	flex-wrap: wrap;
 	font-family: "Bebas";
 	font-size: 24px;
 	font-weight: 400;
@@ -2252,20 +2266,6 @@ html.active2 {
 
 .goods-buy__reviews-title-number {
 	margin-left: 13px;
-}
-
-.goods-buy__reviews-btn {
-	width: 163px;
-	height: 44px;
-	border: 2px solid #000000;
-	text-transform: uppercase;
-	text-align: center;
-	color: #000000;
-	font-family: "Bebas";
-	font-size: 24px;
-	font-weight: 400;
-	line-height: 40px;
-	cursor: pointer;
 }
 
 .goods-buy__reviews-post-wrap {
@@ -2489,6 +2489,10 @@ html.active2 {
 	margin-top: 25px;
 }
 
+.goods-item__sale-item-wrap {
+	font-weight: 500;
+}
+
 .goods-item__sale-item-wrap, .goods-item__price-wrap {
 	display: flex;
 	cursor: pointer;
@@ -2583,7 +2587,7 @@ html.active2 {
 	margin-bottom: 40px;
 }
 
-.seller-comments__title, .seller-comments__bnt {
+.seller-comments__title {
 	color: #000;
 	text-transform: uppercase;
 	font-family: Bebas;
@@ -2593,17 +2597,6 @@ html.active2 {
 
 .seller-comments__title-number {
 	color: $accent-color;
-}
-
-.seller-comments__bnt {
-	border: 2px solid #000;
-	padding: 5px 15px;
-	cursor: pointer;
-	transition: all 0.5s;
-	&:hover {
-		color: #fff;
-		background-color: #000;
-	}
 }
 
 .seller-comments__bnt-small {
@@ -2690,13 +2683,6 @@ html.active2 {
 		display: flex;
 		justify-content: space-between;
 	}
-	.goods-menu {
-		display: block;
-		max-width: 395px;
-		min-width: 250px;
-    margin: 0;
-		padding-right: 45px;
-	}
 	.view {
 		margin-top: 120px;
 	}
@@ -2706,6 +2692,9 @@ html.active2 {
 	display: flex;
 	flex-wrap: wrap;
 	margin-bottom: 30px;
+	font-family: "Fira-Sans";
+	font-weight: 400;
+	align-items: center;
 }
 
 .categories__title {
@@ -2721,7 +2710,7 @@ html.active2 {
 }
 
 .categories__main-wrap {
-	width: calc(100% - 250px);
+	width: calc(100% - 200px);
 }
 
 .categories__filter {
@@ -2729,6 +2718,15 @@ html.active2 {
 	font-family: "Fira-Sans";
 	margin-bottom: 30px;
 	flex-wrap: wrap;
+}
+.categories__filter.active2 {
+	display: flex;
+}
+
+.filter-wrap-select {
+	position: relative;
+  line-height: 32px;
+  margin-left: 15px;
 }
 
 .filter-wrap {
@@ -2931,9 +2929,14 @@ html.active2 {
 }
 
 .card-categories__img {
+	display: block;
 	position: relative;
-	overflow: hidden;
-	height: 390px;
+	.card-categories__link {
+		position: relative;
+		padding-bottom: 143%;
+		height: 0;
+		overflow: hidden;
+	}
 	.card-categories__icons {
 		display: none;
 		position: absolute;
@@ -2941,13 +2944,12 @@ html.active2 {
 		top: 15px;
 	}
 	img {
-		display: block;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
 		height: 100%;
-		position: absolute;
-		left: 0;
-		right: 0;
-		object-fit: cover;
 	}
 }
 
@@ -3018,6 +3020,14 @@ html.active2 {
 		left: 0;
 		top: -16px;
 		background-color: #E3E3E3;
+	}
+}
+
+.row-wrap, .tff-row {
+	display: flex;
+	justify-content: space-between;
+	.categories__title-wrap {
+		display: none;
 	}
 }
 
@@ -3213,11 +3223,11 @@ html.active2 {
 .before-stock, .stock-end {
 	display: none;
 }
-.inner-tff__time.before-stock {
-	//display: block;
-}
+//.inner-tff__time.before-stock {
+//	display: block;
+//}
 .inner-tff__time.stock-end {
-	display: block;
+	display: none;
 }
 .win-popup {
 	.win-popup__title-wrap {
@@ -3354,22 +3364,9 @@ html.active2 {
 	margin-bottom: 32px;
 }
 .ordering__btn, .ordering__btn-back {
-	font-family: Bebas;
-	font-size: 20px;
-	color: #000;
-	border: 2px solid #000;
-	padding: 7px 18px;
-	background-color: $main-color;
-	transition: all 0.5s;
-	font-weight: 600;
-	cursor: pointer;
-	margin-bottom: 60px;
-	&:hover {
-		color: #fff;
-		background-color: #000;
-	}
+	margin-bottom: 40px;
 }
-.ordering__btn-back {
+.ordering__btn-back.black-btn {
 	border: none;
 }
 .ordering__step-2, .ordering__step-3 {
@@ -3589,7 +3586,81 @@ html.active2 {
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 5px;
+	font-family: "Fira-Sans";
+	color: #3A3D3D;
+	&.header-shops {
+		display: none;
+		&.active {
+			display: flex;
+			position: fixed;
+			width: calc(100% - 100px);
+			margin: 0 auto;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 3;
+			background-color: #fff;
+			padding: 10px 50px 10px 0px;
+		}
+		.shops-item__title {
+			display: flex;
+			align-items: center;
+		}
+	}
 }
+.header-shops__logo {
+	width: 60px;
+	height: 50px;
+	position: relative;
+	overflow: hidden;
+	margin-right: 20px;
+	flex-shrink: 0;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		left: 0;
+		top: 0;
+	}
+}
+.goods-menu.active {
+	position: fixed;
+	top: 132px;
+	left: 85px;
+	z-index: 2;
+}
+.top-memu.active {
+	position: fixed;
+	width: calc(100% - 50px);
+	background-color: $main-color;
+	padding-left: 408px;
+	padding-right: 30px;
+	padding-top: 40px;
+	top: 50px;
+	right: 0;
+	left: 0;
+	z-index: 2;
+	.top-memu__list {
+		width: 80%;
+	}
+}
+.shop-block {
+	.filter.active3 {	
+		position: fixed;
+		width: calc(100% - 100px);
+		padding-left: 357px;
+		padding-bottom: 20px;
+		padding-right: 30px;
+		padding-top: 10px; 
+		background-color: #F7FBFB;
+		top: 122px;	
+		right: 50px;
+		z-index: 1;
+	}
+}
+
+
 .shops-item__subscribe {
 	display: flex;
 	align-items: center;
@@ -3619,27 +3690,46 @@ html.active2 {
 		background-position: 0 -19px;
 	}
 }
-.shops-item__btn {
+.black-btn {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
 	font-family: Bebas;
 	color: #000;
 	font-size: 20px;
-	font-weight: 600;
 	text-transform: uppercase;
-	padding: 7px 20px;
+	font-weight: 900;
+	padding: 7px 30px;
 	border: 2px solid #000;
-	margin-left: 20px;
 	transition: all 0.5s;
+	background-color: transparent;
 	cursor: pointer;
 	&:hover {
 		color: #fff;
 		background-color: #000;
 	}
 }
+.black-btn__moreText {
+	margin-left: 3px;
+}
+.shops-item__button {
+	margin-left: 20px;
+}
 .shops-item__logo {
+	display: block;
 	width: 100%;
-	position: relative;
+  position: relative;
+  padding-bottom: 40%;
+  height: 0;
+  overflow: hidden;
 	img {
 		width: 100%;
+		height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
 	}
 }
 .shops-labels {
@@ -3668,13 +3758,13 @@ html.active2 {
 		padding-bottom: 30px;
 		margin-bottom: 0;
 	}
-	.shops-item__name {
-		font-size: 24px;
-	}
 	.shops__inner-wrap {
 		width: 100%;
 		background-color: #fff;
 	}
+}
+.shops-item__name {
+	font-size: 24px;
 }
 .shops-menu-top {
 	background-color: $main-color;
@@ -3684,7 +3774,10 @@ html.active2 {
 }
 .top-memu {
 	padding-top: 30px;
-	padding-bottom: 35px;
+	padding-bottom: 20px;
+}
+.top-memu__list-small {
+	display: none;
 }
 .top-memu__list {
 	display: flex;
@@ -3733,32 +3826,7 @@ html.active2 {
 }
 .shops-goods__content {
 	flex-grow: 1;
-}
-.shops-left-menu {
-	flex-basis: 337px;
-}
-.left-menu__title {
-	text-transform: uppercase;
-	font-size: 20px;
-	font-weight: 500;
-	margin-bottom: 50px;
-}
-.left-menu__title-number {
-	font-size: 16px;
-	color: #929396;
-	text-transform: lowercase;
-	font-weight: 400;
-}
-.left-menu__list {
-	li {
-		margin-bottom: 15px;
-		&.active {
-			font-weight: 500;
-		}
-	}
-	a {
-		color: #000;
-	}
+	width: 100%;
 }
 .shops-contacts {
 	display: none;
@@ -3771,6 +3839,9 @@ html.active2 {
 }
 .shops-contacts__table {
 	margin-bottom: 30px;
+}
+.shops-contacts__info {
+	padding-bottom: 120px;
 }
 .shops-contacts__title {
 	color: $accent-color;
@@ -3809,8 +3880,22 @@ html.active2 {
 	}
 }
 
+.inner-menu__left {
+	display: flex;
+	margin-bottom: 35px;
+}
 
-
+.inner-menu__right {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 35px;
+	&.active {
+		display: none;
+	}
+	.select__filter {
+		position: relative;
+	}
+}
 
 
 
@@ -4315,6 +4400,8 @@ html.active2 {
 }
 
 .post-form__btn-wrap {
+	display: flex;
+	justify-content: center;
 	margin-bottom: 38px;
 }
 
@@ -4343,19 +4430,7 @@ html.active2 {
 	}
 }
 
-.post-form__btn-wrap {
-	text-align: center;
-	button {
-		border: none;
-		border: 2px solid #000;
-		font-family: "Bebas";
-		font-weight: 900;
-		font-size: 16px;
-		padding: 10px 20px;
-		background-color: $main-color;
-		cursor: pointer;
-	}
-}
+
 
 
 

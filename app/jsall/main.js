@@ -10,7 +10,8 @@ $(document).ready(function() {
     
     // Filter menu
     $('.select__filter').click(function(event) {
-		$('.select-choose-wrap, .select__wrap').toggleClass('active'); 
+		$('.select-choose-wrap, .select__wrap, .categories__filter').toggleClass('active'); 
+		$('.categories__filter').toggleClass('active2'); 
 		
     });
 
@@ -229,30 +230,38 @@ $(document).ready(function() {
     });
 
 
-    // btn shops-contacts    
+    // btn shops-menu (goods sp tff follower conatact)   
     $('.shop-goods').click(function(){
         $('.top-memu__list-item').removeClass('active');
         $(this).addClass('active');
         $('.shop-block').removeClass('active');
+        $('.view').removeClass('active');
         $('.shops-goods').addClass('active');
+        $('.inner-menu__right').removeClass('active');
     });
 
     $('.shop-sp').click(function(){
         $('.top-memu__list-item').removeClass('active');
         $(this).addClass('active');
         $('.shop-block').removeClass('active');
+        $('.view').removeClass('active');
+        $('.inner-menu__right').addClass('active');
     });
 
     $('.shop-tff').click(function(){
         $('.top-memu__list-item').removeClass('active');
         $(this).addClass('active');
         $('.shop-block').removeClass('active');
+        $('.view').removeClass('active');
+        $('.inner-menu__right').addClass('active');
     });
 
     $('.shop-followers').click(function(){
         $('.top-memu__list-item').removeClass('active');
         $(this).addClass('active');
         $('.shop-block').removeClass('active');
+        $('.view').removeClass('active');
+        $('.inner-menu__right').addClass('active');
     });
 
     $('.shop-contact').click(function(){
@@ -260,6 +269,8 @@ $(document).ready(function() {
         $(this).addClass('active');
         $('.shop-block').removeClass('active');
         $('.shops-contacts').addClass('active');
+        $('.view').addClass('active');
+        $('.inner-menu__right').addClass('active');
     });
                
 
@@ -387,8 +398,6 @@ if (document.getElementById('win-popup_scroll')) {
 
 
 // оформление заказа ordering
-
-
 
 let btnStep1 = document.querySelector('.btn-step1');
 
@@ -593,7 +602,59 @@ if (shopInfo) { //  чтобы на других страницах не был�
 }
 
 
+// Складывание баннера в белую полоску на shops-inner
 
+let shopsItem = document.querySelector('.shops-itemJs') // весь блок с баннером
+let shopsTop = document.querySelector('.item-shops')    // название магаз кнопка в баннере
+let scrollMenu = document.querySelector('.scroll-menu') // мой рейтинг в шапке
+let headerTop = document.querySelector('.header-shops') // название магаз кнопка в шапке
+let blockContent = document.querySelector('.shops-content') // весь блок с меню и карточками товара
+let menu = document.querySelector('.goods-menu') // меню
+let menuTop = document.querySelector('.top-memu') // меню: товары sp tff итд
+let filter = document.querySelector('.filter') // меню товары sp tff итд
+let blockCard = document.querySelector('.shops-inner-card') // блок с карточками товара
+
+function scrolShopsItem() {
+    let topItem = shopsItem.getBoundingClientRect()
+
+    if (document.body.getBoundingClientRect().top < -10) {
+        scrollMenu.style.display = 'none'
+        shopsTop.style.display = 'none'
+    }
+    if (topItem.top <= -180) {      
+        shopsItem.style.height = '1px'
+        headerTop.classList.add('active')
+        blockContent.style.paddingTop = '400px'
+        menu.classList.add('active')
+        menuTop.classList.add('active')
+        filter.classList.add('active3')  
+        if (window.getComputedStyle(menu, null).getPropertyValue('display') == 'block') {
+            blockCard.style.paddingLeft = '310px'
+        }
+        else { blockCard.style.paddingLeft = '0px' }
+        
+    }
+    if (topItem.top >= -179) {
+        shopsItem.style.display = 'block'
+        headerTop.classList.remove('active')
+        shopsItem.style.height = 'auto'
+        blockContent.style.paddingTop = '0px'
+        menu.classList.remove('active')
+        menuTop.classList.remove('active')
+        filter.classList.remove('active3')  
+        blockCard.style.paddingLeft = '0px'
+    }
+    if (document.body.getBoundingClientRect().top > -10) {
+        scrollMenu.style.display = 'block'
+        shopsTop.style.display = 'flex'     
+    }
+    
+     
+}
+if (shopsItem) {
+    window.addEventListener('scroll', scrolShopsItem)
+    window.addEventListener('resize', scrolShopsItem)
+}
 
 
 

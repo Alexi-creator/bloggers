@@ -44,10 +44,8 @@
 						Мой рейтинг: <span class="menu__rating-number">0</span>
 					</div>
 					<div class="menu__categories">
-						<div class="menu__catalog">
-							<div class="menu__catalog-btn">
-								<div class="menu__catalog-name">Каталог товаров</div> <span></span>
-							</div>
+						<div class="menu__catalog-btn">
+							<div class="black-btn">Каталог товаров <span class="menu__catalog-btn-arrow"></span> </div> 
 						</div>
 						<ul class="menu__list">
 							<li class="menu__items"><a href="#">женщинам</a></li>
@@ -84,7 +82,7 @@
 	<!-- страница с категориями -->
 	
 	<div class="section">
-		<section class="categories">
+		<section class="categories card-categories-filter">
 			<div class="section-inner">
 				<div class="categories__inner">
 					<menu class="goods-menu">
@@ -94,118 +92,138 @@
 								<span class="categories__number-goods">1 200</span> товаров
 							</div>
 						</div>
-						<li class="goods-menu__main"><a href="#">Одежда</a></li>
-						<li><a href="#">Верхняя одежда</a></li>
-						<li class="goods-menu_active"><a href="#">Платья и сарафаны</a>
-							<ul class="goods-menu__current-list">
-								<li><a href="#">Повседневные платья</a></li>
-								<li><a href="#">Летние платья</a></li>
-								<li><a href="#">Коктельные платья</a></li>
-								<li><a href="#">Вечерние платья</a></li>
-								<li><a href="#">Деловые платья</a></li>
-								<li><a href="#">Сарафаны</a></li>
-								<li><a href="#">Вязаные платья</a></li>
-								<li><a href="#">Пляжные платья, туники</a></li>
-								<li><a href="#">Джинсовые платья</a></li>
-								<li><a href="#">Платья-мини</a></li>
-								<li><a href="#">Платья-миди</a></li>
-								<li><a href="#">Платья-макси</a></li>
-								<li><a href="#">Платья больших размеров</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Джемперы и кардиганы</a></li>
-						<li><a href="#">Блузы и рубашки</a></li>
-						<li><a href="#">Юбки</a></li>
-						<li><a href="#">Брюки</a></li>
-						<li><a href="#">Комбинезоны</a></li>
-						<li><a href="#">Джинсы</a></li>
-						<li><a href="#">Пиджаки и костюмы</a></li>
-						<li><a href="#">Толстовки и олимпийки</a></li>
-						<li><a href="#">Футболки и поло</a></li>
+						<ul>	
+							<li class="goods-menu__main"><a href="#">Одежда</a></li>
+							<li><a href="#">Верхняя одежда</a></li>
+							<li class="goods-menu_active"><a href="#">Платья и сарафаны</a>
+								<ul class="goods-menu__current-list">
+									<li><a href="#">Повседневные платья</a></li>
+									<li><a href="#">Летние платья</a></li>
+									<li><a href="#">Коктельные платья</a></li>
+									<li><a href="#">Вечерние платья</a></li>
+									<li><a href="#">Деловые платья</a></li>
+									<li><a href="#">Сарафаны</a></li>
+									<li><a href="#">Вязаные платья</a></li>
+									<li><a href="#">Пляжные платья, туники</a></li>
+									<li><a href="#">Джинсовые платья</a></li>
+									<li><a href="#">Платья-мини</a></li>
+									<li><a href="#">Платья-миди</a></li>
+									<li><a href="#">Платья-макси</a></li>
+									<li><a href="#">Платья больших размеров</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Джемперы и кардиганы</a></li>
+							<li><a href="#">Блузы и рубашки</a></li>
+							<li><a href="#">Юбки</a></li>
+							<li><a href="#">Брюки</a></li>
+							<li><a href="#">Комбинезоны</a></li>
+							<li><a href="#">Джинсы</a></li>
+							<li><a href="#">Пиджаки и костюмы</a></li>
+							<li><a href="#">Толстовки и олимпийки</a></li>
+							<li><a href="#">Футболки и поло</a></li>
+						</ul>
 					</menu>
+
+					
+
 					<div class="categories__main-wrap">
-						<div class="categories__filter filter">
 
-							<div class="filter-popular filter-wrap">
-								<div class="filter-popular__header filter__header">
-									<span class="filter-popular__current filter__current">По популярности</span>
-									<div class="filter-popular__icon filter__icon"></div>
-								</div>
-								<div class="filter-popular__body filter__body">
-									<div class="filter-popular__item filter__item">популярность 1</div>
-									<div class="filter-popular__item filter__item">популярность 2</div>
-									<div class="filter-popular__item filter__item">популярность 3</div>
-									<div class="filter-popular__item filter__item">популярность 4</div>
-									<div class="filter-popular__item filter__item">популярность 5</div>
-								</div>
-							</div>
-				
-							<div class="filter-price filter-wrap">
-								<div class="filter-price__header filter__header">
-									<span class="filter-price__current filter__current">Цена</span>
-									<div class="filter-price__icon filter__icon"></div>
-								</div>
-								<div class="filter-price__body filter__body">
-									<div class="filter-price__item filter__item">цена 1</div>
-									<div class="filter-price__item filter__item">цена 2</div>
-									<div class="filter-price__item filter__item">цена 3</div>
-									<div class="filter-price__item filter__item">цена 4</div>
-									<div class="filter-price__item filter__item">цена 5</div>
-								</div>
-							</div>
+						<div class="filter-wrap-select">
+							<div class="select__filter">Фильтры <span class="label-icons">0</span></div>
+						</div>
 
-							<div class="filter-size filter-wrap">
-								<div class="filter-size__header filter__header">
-									<span class="filter-size__current filter__current">Размер</span>
-									<div class="filter-size__icon filter__icon"></div>
-								</div>
-								<div class="filter-size__body filter__body">
-									<div class="filter-size__item filter__item">Размер: 44</div>
-									<div class="filter-size__item filter__item">Размер: 46</div>
-									<div class="filter-size__item filter__item">Размер: 48</div>
-									<div class="filter-size__item filter__item">Размер: 50</div>
-								</div>
-							</div>
+						<div class="row-wrap">
 
-							<div class="filter-material filter-wrap">
-								<div class="filter-material__header filter__header">
-									<span class="filter-material__current filter__current">Материал</span>
-									<div class="filter-material__icon filter__icon"></div>
-								</div>
-								<div class="filter-material__body filter__body">
-									<div class="filter-material__item filter__item">материал: 1</div>
-									<div class="filter-material__item filter__item">материал: 2</div>
-									<div class="filter-material__item filter__item">материал: 3</div>
-									<div class="filter-material__item filter__item">материал: 4</div>
+							<div class="categories__title-wrap">
+								<h2 class="categories__title">платья и сарафаны</h2>
+								<div class="categories__ammount">
+									<span class="categories__number-goods">1 200</span> товаров
 								</div>
 							</div>
-
-							<div class="filter-season filter-wrap">
-								<div class="filter-season__header filter__header">
-									<span class="filter-season__current filter__current">Сезон</span>
-									<div class="filter-season__icon filter__icon"></div>
+	
+							<div class="categories__filter filter">
+	
+								<div class="filter-popular filter-wrap">
+									<div class="filter-popular__header filter__header">
+										<span class="filter-popular__current filter__current">По популярности</span>
+										<div class="filter-popular__icon filter__icon"></div>
+									</div>
+									<div class="filter-popular__body filter__body">
+										<div class="filter-popular__item filter__item">популярность 1</div>
+										<div class="filter-popular__item filter__item">популярность 2</div>
+										<div class="filter-popular__item filter__item">популярность 3</div>
+										<div class="filter-popular__item filter__item">популярность 4</div>
+										<div class="filter-popular__item filter__item">популярность 5</div>
+									</div>
 								</div>
-								<div class="filter-season__body filter__body">
-									<div class="filter-season__item filter__item">лето</div>
-									<div class="filter-season__item filter__item">осень</div>
-									<div class="filter-season__item filter__item">зима</div>
-									<div class="filter-season__item filter__item">весна</div>
+					
+								<div class="filter-price filter-wrap">
+									<div class="filter-price__header filter__header">
+										<span class="filter-price__current filter__current">Цена</span>
+										<div class="filter-price__icon filter__icon"></div>
+									</div>
+									<div class="filter-price__body filter__body">
+										<div class="filter-price__item filter__item">цена 1</div>
+										<div class="filter-price__item filter__item">цена 2</div>
+										<div class="filter-price__item filter__item">цена 3</div>
+										<div class="filter-price__item filter__item">цена 4</div>
+										<div class="filter-price__item filter__item">цена 5</div>
+									</div>
 								</div>
+	
+								<div class="filter-size filter-wrap">
+									<div class="filter-size__header filter__header">
+										<span class="filter-size__current filter__current">Размер</span>
+										<div class="filter-size__icon filter__icon"></div>
+									</div>
+									<div class="filter-size__body filter__body">
+										<div class="filter-size__item filter__item">Размер: 44</div>
+										<div class="filter-size__item filter__item">Размер: 46</div>
+										<div class="filter-size__item filter__item">Размер: 48</div>
+										<div class="filter-size__item filter__item">Размер: 50</div>
+									</div>
+								</div>
+	
+								<div class="filter-material filter-wrap">
+									<div class="filter-material__header filter__header">
+										<span class="filter-material__current filter__current">Материал</span>
+										<div class="filter-material__icon filter__icon"></div>
+									</div>
+									<div class="filter-material__body filter__body">
+										<div class="filter-material__item filter__item">материал: 1</div>
+										<div class="filter-material__item filter__item">материал: 2</div>
+										<div class="filter-material__item filter__item">материал: 3</div>
+										<div class="filter-material__item filter__item">материал: 4</div>
+									</div>
+								</div>
+	
+								<div class="filter-season filter-wrap">
+									<div class="filter-season__header filter__header">
+										<span class="filter-season__current filter__current">Сезон</span>
+										<div class="filter-season__icon filter__icon"></div>
+									</div>
+									<div class="filter-season__body filter__body">
+										<div class="filter-season__item filter__item">лето</div>
+										<div class="filter-season__item filter__item">осень</div>
+										<div class="filter-season__item filter__item">зима</div>
+										<div class="filter-season__item filter__item">весна</div>
+									</div>
+								</div>
+	
+								<div class="filter-shop filter-wrap">
+									<div class="filter-shop__header filter__header">
+										<span class="filter-shop__current filter__current">Магазины</span>
+										<div class="filter-shop__icon filter__icon"></div>
+									</div>
+									<div class="filter-shop__body filter__body">
+										<div class="filter-shop__item filter__item">Магазины: 1</div>
+										<div class="filter-shop__item filter__item">Магазины: 2</div>
+										<div class="filter-shop__item filter__item">Магазины: 3</div>
+										<div class="filter-shop__item filter__item">Магазины: 4</div>
+									</div>
+								</div>
+							
 							</div>
-
-							<div class="filter-shop filter-wrap">
-								<div class="filter-shop__header filter__header">
-									<span class="filter-shop__current filter__current">Магазины</span>
-									<div class="filter-shop__icon filter__icon"></div>
-								</div>
-								<div class="filter-shop__body filter__body">
-									<div class="filter-shop__item filter__item">Магазины: 1</div>
-									<div class="filter-shop__item filter__item">Магазины: 2</div>
-									<div class="filter-shop__item filter__item">Магазины: 3</div>
-									<div class="filter-shop__item filter__item">Магазины: 4</div>
-								</div>
-							</div>
-						
 						</div>
 
 						<div class="categories__card-wrap">
@@ -213,15 +231,15 @@
 								<div class="card-categories__inner">
 
 									<div class="card-categories__item">
-										<div class="card-categories__img">
-											<a href="#">
+										<a class="card-categories__img" href="#">
+											<div class="card-categories__link">
 												<img src="img/slider-item.png" alt="">
-											</a>
+											</div>
 											<div class="goods-slider__options card-categories__icons">
 												<div class="goods-slider__options-heart"></div>
 												<div class="goods-slider__options-share"></div>
 											</div>
-										</div>
+										</a>
 										<div class="card-categories__descr">
 											<div class="card-categories__descr-wrap">
 												<div class="card-categories__stock">
@@ -278,15 +296,15 @@
 									</div>
 
 									<div class="card-categories__item card-categories__item_stock">
-										<div class="card-categories__img">
-											<a href="#">
+										<a class="card-categories__img" href="#">
+											<div class="card-categories__link">
 												<img src="img/bloger.jpg" alt="">
-											</a>
+											</div>
 											<div class="goods-slider__options card-categories__icons">
 												<div class="goods-slider__options-heart"></div>
 												<div class="goods-slider__options-share"></div>
 											</div>
-										</div>
+										</a>
 										<div class="card-categories__descr">
 											<div class="card-categories__descr-wrap">
 												<div class="card-categories__stock">
@@ -343,15 +361,15 @@
 									</div>
 
 									<div class="card-categories__item">
-										<div class="card-categories__img">
-											<a href="#">
+										<a class="card-categories__img" href="#">
+											<div class="card-categories__link">
 												<img src="img/slider-item.png" alt="">
-											</a>
+											</div>
 											<div class="goods-slider__options card-categories__icons">
 												<div class="goods-slider__options-heart"></div>
 												<div class="goods-slider__options-share"></div>
 											</div>
-										</div>
+										</a>
 										<div class="card-categories__descr">
 											<div class="card-categories__descr-wrap">
 												<div class="card-categories__stock">
@@ -390,7 +408,7 @@
 														3 500 руб.
 													</div>
 													<div class="card-categories__price-new">
-														от <span class="card-categories__price-number">3 000</span>руб.
+														<span class="card-categories__price-number">3 000</span> руб.
 													</div>
 												</div>
 												<div class="card-categories__size">
@@ -408,15 +426,15 @@
 									</div>
 
 									<div class="card-categories__item card-categories__item_stock">
-										<div class="card-categories__img">
-											<a href="#">
-												<img src="img/slider-item.png" alt="">
-											</a>
+										<a class="card-categories__img" href="#">
+											<div class="card-categories__link">
+												<img src="img/bloger.jpg" alt="">
+											</div>
 											<div class="goods-slider__options card-categories__icons">
 												<div class="goods-slider__options-heart"></div>
 												<div class="goods-slider__options-share"></div>
 											</div>
-										</div>
+										</a>
 										<div class="card-categories__descr">
 											<div class="card-categories__descr-wrap">
 												<div class="card-categories__stock">
@@ -455,7 +473,7 @@
 														3 500 руб.
 													</div>
 													<div class="card-categories__price-new">
-														от <span class="card-categories__price-number">3 000</span>руб.
+														от <span class="card-categories__price-number">3 000</span> руб.
 													</div>
 												</div>
 												<div class="card-categories__size">
@@ -473,15 +491,15 @@
 									</div>
 
 									<div class="card-categories__item">
-										<div class="card-categories__img">
-											<a href="#">
+										<a class="card-categories__img" href="#">
+											<div class="card-categories__link">
 												<img src="img/slider-item.png" alt="">
-											</a>
+											</div>
 											<div class="goods-slider__options card-categories__icons">
 												<div class="goods-slider__options-heart"></div>
 												<div class="goods-slider__options-share"></div>
 											</div>
-										</div>
+										</a>
 										<div class="card-categories__descr">
 											<div class="card-categories__descr-wrap">
 												<div class="card-categories__stock">
@@ -520,7 +538,7 @@
 														3 500 руб.
 													</div>
 													<div class="card-categories__price-new">
-														от <span class="card-categories__price-number">3 000</span>руб.
+														<span class="card-categories__price-number">3 000</span> руб.
 													</div>
 												</div>
 												<div class="card-categories__size">
@@ -538,15 +556,15 @@
 									</div>
 
 									<div class="card-categories__item card-categories__item_stock">
-										<div class="card-categories__img">
-											<a href="#">
-												<img src="img/slider-item.png" alt="">
-											</a>
+										<a class="card-categories__img" href="#">
+											<div class="card-categories__link">
+												<img src="img/bloger.jpg" alt="">
+											</div>
 											<div class="goods-slider__options card-categories__icons">
 												<div class="goods-slider__options-heart"></div>
 												<div class="goods-slider__options-share"></div>
 											</div>
-										</div>
+										</a>
 										<div class="card-categories__descr">
 											<div class="card-categories__descr-wrap">
 												<div class="card-categories__stock">
@@ -585,7 +603,7 @@
 														3 500 руб.
 													</div>
 													<div class="card-categories__price-new">
-														от <span class="card-categories__price-number">3 000</span>руб.
+														от <span class="card-categories__price-number">3 000</span> руб.
 													</div>
 												</div>
 												<div class="card-categories__size">
@@ -603,15 +621,15 @@
 									</div>
 
 									<div class="card-categories__item">
-										<div class="card-categories__img">
-											<a href="#">
+										<a class="card-categories__img" href="#">
+											<div class="card-categories__link">
 												<img src="img/slider-item.png" alt="">
-											</a>
+											</div>
 											<div class="goods-slider__options card-categories__icons">
 												<div class="goods-slider__options-heart"></div>
 												<div class="goods-slider__options-share"></div>
 											</div>
-										</div>
+										</a>
 										<div class="card-categories__descr">
 											<div class="card-categories__descr-wrap">
 												<div class="card-categories__stock">
@@ -650,7 +668,7 @@
 														3 500 руб.
 													</div>
 													<div class="card-categories__price-new">
-														от <span class="card-categories__price-number">3 000</span>руб.
+														<span class="card-categories__price-number">3 000</span> руб.
 													</div>
 												</div>
 												<div class="card-categories__size">
@@ -668,15 +686,15 @@
 									</div>
 
 									<div class="card-categories__item card-categories__item_stock">
-										<div class="card-categories__img">
-											<a href="#">
-												<img src="img/slider-item.png" alt="">
-											</a>
+										<a class="card-categories__img" href="#">
+											<div class="card-categories__link">
+												<img src="img/bloger.jpg" alt="">
+											</div>
 											<div class="goods-slider__options card-categories__icons">
 												<div class="goods-slider__options-heart"></div>
 												<div class="goods-slider__options-share"></div>
 											</div>
-										</div>
+										</a>
 										<div class="card-categories__descr">
 											<div class="card-categories__descr-wrap">
 												<div class="card-categories__stock">
@@ -715,7 +733,7 @@
 														3 500 руб.
 													</div>
 													<div class="card-categories__price-new">
-														от <span class="card-categories__price-number">3 000</span>руб.
+														от <span class="card-categories__price-number">3 000</span> руб.
 													</div>
 												</div>
 												<div class="card-categories__size">
@@ -732,525 +750,6 @@
 										</div>
 									</div>
 
-									<div class="card-categories__item">
-										<div class="card-categories__img">
-											<a href="#">
-												<img src="img/slider-item.png" alt="">
-											</a>
-											<div class="goods-slider__options card-categories__icons">
-												<div class="goods-slider__options-heart"></div>
-												<div class="goods-slider__options-share"></div>
-											</div>
-										</div>
-										<div class="card-categories__descr">
-											<div class="card-categories__descr-wrap">
-												<div class="card-categories__stock">
-													<div class="goods-item__sale-item-wrap">
-														<div class="goods-item__sale-item">
-															<div class="goods-item__icon1"></div>
-															<div class="goods-item__percent1">
-																до <span class="goods-item__percent1-number">-50%</span>
-															</div>
-															<div class="goods-buy__tooltip">
-																Индивидуальная скидка до 
-																<span class="goods-buy__tooltip-number">50</span>%
-																<div class="goods-buy__tooltip-transparent"></div>
-															</div>
-														</div>
-														<div class="goods-item__sale-item">
-															<div class="goods-item__icon2"></div>
-															<div class="goods-item__percent2">
-																<span class="goods-item__percent2-number">-30%</span>
-															</div>
-															<div class="goods-buy__tooltip goods-buy__tooltip-sp">
-																Скидка в совместной покупке 
-																<div class="goods-buy__tooltip-transparent"></div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="card-categories__brand">
-													<a href="#">Enjoy Fashion</a>
-												</div>
-												<div class="card-categories__goods-descr">
-													Платье PL-581/ramina (Emka Fashion) 
-												</div>
-												<div class="card-categories__price">
-													<div class="card-categories__price-old">
-														3 500 руб.
-													</div>
-													<div class="card-categories__price-new">
-														от <span class="card-categories__price-number">3 000</span>руб.
-													</div>
-												</div>
-												<div class="card-categories__size">
-													<ul class="card-categories__list">
-														<li>Размер:</li>
-														<li>42</li>
-														<li>44</li>
-														<li>46</li>
-														<li>48</li>
-														<li>еще +</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="card-categories__item card-categories__item_stock">
-										<div class="card-categories__img">
-											<a href="#">
-												<img src="img/slider-item.png" alt="">
-											</a>
-											<div class="goods-slider__options card-categories__icons">
-												<div class="goods-slider__options-heart"></div>
-												<div class="goods-slider__options-share"></div>
-											</div>
-										</div>
-										<div class="card-categories__descr">
-											<div class="card-categories__descr-wrap">
-												<div class="card-categories__stock">
-													<div class="goods-item__sale-item-wrap">
-														<div class="goods-item__sale-item">
-															<div class="goods-item__icon1"></div>
-															<div class="goods-item__percent1">
-																до <span class="goods-item__percent1-number">-50%</span>
-															</div>
-															<div class="goods-buy__tooltip">
-																Индивидуальная скидка до 
-																<span class="goods-buy__tooltip-number">50</span>%
-																<div class="goods-buy__tooltip-transparent"></div>
-															</div>
-														</div>
-														<div class="goods-item__sale-item">
-															<div class="goods-item__icon2"></div>
-															<div class="goods-item__percent2">
-																<span class="goods-item__percent2-number">-30%</span>
-															</div>
-															<div class="goods-buy__tooltip goods-buy__tooltip-sp">
-																Скидка в совместной покупке 
-																<div class="goods-buy__tooltip-transparent"></div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="card-categories__brand">
-													<a href="#">Enjoy Fashion</a>
-												</div>
-												<div class="card-categories__goods-descr">
-													Платье PL-581/ramina (Emka Fashion) 
-												</div>
-												<div class="card-categories__price">
-													<div class="card-categories__price-old">
-														3 500 руб.
-													</div>
-													<div class="card-categories__price-new">
-														от <span class="card-categories__price-number">3 000</span>руб.
-													</div>
-												</div>
-												<div class="card-categories__size">
-													<ul class="card-categories__list">
-														<li>Размер:</li>
-														<li>42</li>
-														<li>44</li>
-														<li>46</li>
-														<li>48</li>
-														<li>еще +</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="card-categories__item">
-										<div class="card-categories__img">
-											<a href="#">
-												<img src="img/slider-item.png" alt="">
-											</a>
-											<div class="goods-slider__options card-categories__icons">
-												<div class="goods-slider__options-heart"></div>
-												<div class="goods-slider__options-share"></div>
-											</div>
-										</div>
-										<div class="card-categories__descr">
-											<div class="card-categories__descr-wrap">
-												<div class="card-categories__stock">
-													<div class="goods-item__sale-item-wrap">
-														<div class="goods-item__sale-item">
-															<div class="goods-item__icon1"></div>
-															<div class="goods-item__percent1">
-																до <span class="goods-item__percent1-number">-50%</span>
-															</div>
-															<div class="goods-buy__tooltip">
-																Индивидуальная скидка до 
-																<span class="goods-buy__tooltip-number">50</span>%
-																<div class="goods-buy__tooltip-transparent"></div>
-															</div>
-														</div>
-														<div class="goods-item__sale-item">
-															<div class="goods-item__icon2"></div>
-															<div class="goods-item__percent2">
-																<span class="goods-item__percent2-number">-30%</span>
-															</div>
-															<div class="goods-buy__tooltip goods-buy__tooltip-sp">
-																Скидка в совместной покупке 
-																<div class="goods-buy__tooltip-transparent"></div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="card-categories__brand">
-													<a href="#">Enjoy Fashion</a>
-												</div>
-												<div class="card-categories__goods-descr">
-													Платье PL-581/ramina (Emka Fashion) 
-												</div>
-												<div class="card-categories__price">
-													<div class="card-categories__price-old">
-														3 500 руб.
-													</div>
-													<div class="card-categories__price-new">
-														от <span class="card-categories__price-number">3 000</span>руб.
-													</div>
-												</div>
-												<div class="card-categories__size">
-													<ul class="card-categories__list">
-														<li>Размер:</li>
-														<li>42</li>
-														<li>44</li>
-														<li>46</li>
-														<li>48</li>
-														<li>еще +</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="card-categories__item card-categories__item_stock">
-										<div class="card-categories__img">
-											<a href="#">
-												<img src="img/slider-item.png" alt="">
-											</a>
-											<div class="goods-slider__options card-categories__icons">
-												<div class="goods-slider__options-heart"></div>
-												<div class="goods-slider__options-share"></div>
-											</div>
-										</div>
-										<div class="card-categories__descr">
-											<div class="card-categories__descr-wrap">
-												<div class="card-categories__stock">
-													<div class="goods-item__sale-item-wrap">
-														<div class="goods-item__sale-item">
-															<div class="goods-item__icon1"></div>
-															<div class="goods-item__percent1">
-																до <span class="goods-item__percent1-number">-50%</span>
-															</div>
-															<div class="goods-buy__tooltip">
-																Индивидуальная скидка до 
-																<span class="goods-buy__tooltip-number">50</span>%
-																<div class="goods-buy__tooltip-transparent"></div>
-															</div>
-														</div>
-														<div class="goods-item__sale-item">
-															<div class="goods-item__icon2"></div>
-															<div class="goods-item__percent2">
-																<span class="goods-item__percent2-number">-30%</span>
-															</div>
-															<div class="goods-buy__tooltip goods-buy__tooltip-sp">
-																Скидка в совместной покупке 
-																<div class="goods-buy__tooltip-transparent"></div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="card-categories__brand">
-													<a href="#">Enjoy Fashion</a>
-												</div>
-												<div class="card-categories__goods-descr">
-													Платье PL-581/ramina (Emka Fashion) 
-												</div>
-												<div class="card-categories__price">
-													<div class="card-categories__price-old">
-														3 500 руб.
-													</div>
-													<div class="card-categories__price-new">
-														от <span class="card-categories__price-number">3 000</span>руб.
-													</div>
-												</div>
-												<div class="card-categories__size">
-													<ul class="card-categories__list">
-														<li>Размер:</li>
-														<li>42</li>
-														<li>44</li>
-														<li>46</li>
-														<li>48</li>
-														<li>еще +</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="card-categories__item">
-										<div class="card-categories__img">
-											<a href="#">
-												<img src="img/slider-item.png" alt="">
-											</a>
-											<div class="goods-slider__options card-categories__icons">
-												<div class="goods-slider__options-heart"></div>
-												<div class="goods-slider__options-share"></div>
-											</div>
-										</div>
-										<div class="card-categories__descr">
-											<div class="card-categories__descr-wrap">
-												<div class="card-categories__stock">
-													<div class="goods-item__sale-item-wrap">
-														<div class="goods-item__sale-item">
-															<div class="goods-item__icon1"></div>
-															<div class="goods-item__percent1">
-																до <span class="goods-item__percent1-number">-50%</span>
-															</div>
-															<div class="goods-buy__tooltip">
-																Индивидуальная скидка до 
-																<span class="goods-buy__tooltip-number">50</span>%
-																<div class="goods-buy__tooltip-transparent"></div>
-															</div>
-														</div>
-														<div class="goods-item__sale-item">
-															<div class="goods-item__icon2"></div>
-															<div class="goods-item__percent2">
-																<span class="goods-item__percent2-number">-30%</span>
-															</div>
-															<div class="goods-buy__tooltip goods-buy__tooltip-sp">
-																Скидка в совместной покупке 
-																<div class="goods-buy__tooltip-transparent"></div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="card-categories__brand">
-													<a href="#">Enjoy Fashion</a>
-												</div>
-												<div class="card-categories__goods-descr">
-													Платье PL-581/ramina (Emka Fashion) 
-												</div>
-												<div class="card-categories__price">
-													<div class="card-categories__price-old">
-														3 500 руб.
-													</div>
-													<div class="card-categories__price-new">
-														от <span class="card-categories__price-number">3 000</span>руб.
-													</div>
-												</div>
-												<div class="card-categories__size">
-													<ul class="card-categories__list">
-														<li>Размер:</li>
-														<li>42</li>
-														<li>44</li>
-														<li>46</li>
-														<li>48</li>
-														<li>еще +</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="card-categories__item card-categories__item_stock">
-										<div class="card-categories__img">
-											<a href="#">
-												<img src="img/slider-item.png" alt="">
-											</a>
-											<div class="goods-slider__options card-categories__icons">
-												<div class="goods-slider__options-heart"></div>
-												<div class="goods-slider__options-share"></div>
-											</div>
-										</div>
-										<div class="card-categories__descr">
-											<div class="card-categories__descr-wrap">
-												<div class="card-categories__stock">
-													<div class="goods-item__sale-item-wrap">
-														<div class="goods-item__sale-item">
-															<div class="goods-item__icon1"></div>
-															<div class="goods-item__percent1">
-																до <span class="goods-item__percent1-number">-50%</span>
-															</div>
-															<div class="goods-buy__tooltip">
-																Индивидуальная скидка до 
-																<span class="goods-buy__tooltip-number">50</span>%
-																<div class="goods-buy__tooltip-transparent"></div>
-															</div>
-														</div>
-														<div class="goods-item__sale-item">
-															<div class="goods-item__icon2"></div>
-															<div class="goods-item__percent2">
-																<span class="goods-item__percent2-number">-30%</span>
-															</div>
-															<div class="goods-buy__tooltip goods-buy__tooltip-sp">
-																Скидка в совместной покупке 
-																<div class="goods-buy__tooltip-transparent"></div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="card-categories__brand">
-													<a href="#">Enjoy Fashion</a>
-												</div>
-												<div class="card-categories__goods-descr">
-													Платье PL-581/ramina (Emka Fashion) 
-												</div>
-												<div class="card-categories__price">
-													<div class="card-categories__price-old">
-														3 500 руб.
-													</div>
-													<div class="card-categories__price-new">
-														от <span class="card-categories__price-number">3 000</span>руб.
-													</div>
-												</div>
-												<div class="card-categories__size">
-													<ul class="card-categories__list">
-														<li>Размер:</li>
-														<li>42</li>
-														<li>44</li>
-														<li>46</li>
-														<li>48</li>
-														<li>еще +</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="card-categories__item">
-										<div class="card-categories__img">
-											<a href="#">
-												<img src="img/slider-item.png" alt="">
-											</a>
-											<div class="goods-slider__options card-categories__icons">
-												<div class="goods-slider__options-heart"></div>
-												<div class="goods-slider__options-share"></div>
-											</div>
-										</div>
-										<div class="card-categories__descr">
-											<div class="card-categories__descr-wrap">
-												<div class="card-categories__stock">
-													<div class="goods-item__sale-item-wrap">
-														<div class="goods-item__sale-item">
-															<div class="goods-item__icon1"></div>
-															<div class="goods-item__percent1">
-																до <span class="goods-item__percent1-number">-50%</span>
-															</div>
-															<div class="goods-buy__tooltip">
-																Индивидуальная скидка до 
-																<span class="goods-buy__tooltip-number">50</span>%
-																<div class="goods-buy__tooltip-transparent"></div>
-															</div>
-														</div>
-														<div class="goods-item__sale-item">
-															<div class="goods-item__icon2"></div>
-															<div class="goods-item__percent2">
-																<span class="goods-item__percent2-number">-30%</span>
-															</div>
-															<div class="goods-buy__tooltip goods-buy__tooltip-sp">
-																Скидка в совместной покупке 
-																<div class="goods-buy__tooltip-transparent"></div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="card-categories__brand">
-													<a href="#">Enjoy Fashion</a>
-												</div>
-												<div class="card-categories__goods-descr">
-													Платье PL-581/ramina (Emka Fashion) 
-												</div>
-												<div class="card-categories__price">
-													<div class="card-categories__price-old">
-														3 500 руб.
-													</div>
-													<div class="card-categories__price-new">
-														от <span class="card-categories__price-number">3 000</span>руб.
-													</div>
-												</div>
-												<div class="card-categories__size">
-													<ul class="card-categories__list">
-														<li>Размер:</li>
-														<li>42</li>
-														<li>44</li>
-														<li>46</li>
-														<li>48</li>
-														<li>еще +</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="card-categories__item card-categories__item_stock">
-										<div class="card-categories__img">
-											<a href="#">
-												<img src="img/slider-item.png" alt="">
-											</a>
-											<div class="goods-slider__options card-categories__icons">
-												<div class="goods-slider__options-heart"></div>
-												<div class="goods-slider__options-share"></div>
-											</div>
-										</div>
-										<div class="card-categories__descr">
-											<div class="card-categories__descr-wrap">
-												<div class="card-categories__stock">
-													<div class="goods-item__sale-item-wrap">
-														<div class="goods-item__sale-item">
-															<div class="goods-item__icon1"></div>
-															<div class="goods-item__percent1">
-																до <span class="goods-item__percent1-number">-50%</span>
-															</div>
-															<div class="goods-buy__tooltip">
-																Индивидуальная скидка до 
-																<span class="goods-buy__tooltip-number">50</span>%
-																<div class="goods-buy__tooltip-transparent"></div>
-															</div>
-														</div>
-														<div class="goods-item__sale-item">
-															<div class="goods-item__icon2"></div>
-															<div class="goods-item__percent2">
-																<span class="goods-item__percent2-number">-30%</span>
-															</div>
-															<div class="goods-buy__tooltip goods-buy__tooltip-sp">
-																Скидка в совместной покупке 
-																<div class="goods-buy__tooltip-transparent"></div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="card-categories__brand">
-													<a href="#">Enjoy Fashion</a>
-												</div>
-												<div class="card-categories__goods-descr">
-													Платье PL-581/ramina (Emka Fashion) 
-												</div>
-												<div class="card-categories__price">
-													<div class="card-categories__price-old">
-														3 500 руб.
-													</div>
-													<div class="card-categories__price-new">
-														от <span class="card-categories__price-number">3 000</span>руб.
-													</div>
-												</div>
-												<div class="card-categories__size">
-													<ul class="card-categories__list">
-														<li>Размер:</li>
-														<li>42</li>
-														<li>44</li>
-														<li>46</li>
-														<li>48</li>
-														<li>еще +</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
 
 								</div>
 							</div>
@@ -1259,8 +758,9 @@
 										
 				</div>
 				<div class="view">
-					<div class="view__button">
-						показать еще <span class="view__yet">4</span> из <span class="view__from">71</span>
+					<div class="black-btn">
+						показать еще 
+						<div class="black-btn__moreText"> <span class="view__yet"> 4 </span> из <span class="view__from"> 71 </span> </div> 
 					</div>
 					<div class="view__button-like">
 						<div class="view__arrow">

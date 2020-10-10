@@ -32,11 +32,24 @@
 				</div>
 				<div class="header__shadow"></div>
 			</div>
+			<div class="shops-item__top header-shops">
+				<div class="shops-item__title">
+					<a href="index.html" class="select__back"></a>
+					<div class="header-shops__logo">
+						<img src="../img/logo-brand.png" alt="">
+					</div>
+					<div class="shops-item__name">Интернет магазин женской одежды и аксессуаров Lass</div>
+				</div>
+				<div class="shops-item__subscribe">
+					<div class="shops-item__share"></div>
+					<div class="black-btn shops-item__button">подписаться</div>
+				</div>
+			</div>
 		</div>
 	</header>
 
 	<!-- меню (категории) -->
-	<div class="menu">
+	<div class="menu scroll-menu">
 		<div class="section">
 			<div class="menu__wrap">
 				<div class="section-inner">
@@ -46,7 +59,9 @@
 					<div class="menu__categories">
 						<div class="menu__catalog">
 							<div class="menu__catalog-btn">
-								<div class="menu__catalog-name">Каталог товаров</div> <span></span>
+								<div class="black-btn">Каталог товаров
+									<span class="menu__catalog-btn-arrow"></span>
+								</div>
 							</div>
 						</div>
 						<ul class="menu__list">
@@ -88,9 +103,9 @@
 			<div class="section-inner">
         <div class="shops__inner-wrap">
 				  <div class="shops__inner">
-            <div class="shops-item">
+            <div class="shops-item shops-itemJs">
 				  		<div class="shops-item__inner">
-				  			<div class="shops-item__top">
+				  			<div class="shops-item__top item-shops">
 				  				<div class="shops-item__title">
 				  					<div class="shops-item__name">Интернет магазин женской одежды и аксессуаров Lass</div>
 				  					<div class="shops-item__categories">
@@ -99,12 +114,12 @@
 				  				</div>
 				  				<div class="shops-item__subscribe">
 				  					<div class="shops-item__share"></div>
-				  					<div class="shops-item__btn">подписаться</div>
+				  					<div class="black-btn shops-item__button">подписаться</div>
 				  				</div>
-				  			</div>
-				  			<div class="shops-item__logo">
-				  				<img src="img/shops-logo.png" alt="">
-				  			</div>
+								</div>
+								<div class="shops-item__logo">
+									<img src="img/shops-logo.png" alt="">
+								</div>
 				  		</div>
 				  	</div>
           </div>
@@ -112,7 +127,7 @@
       </div>
     </section>
 
-    <div class="section-inner"> 
+    <div class="section-inner shops-content"> 
       <div class="shops-menu-top">
         <div class="shops__inner">
           <div class="top-memu">
@@ -122,24 +137,74 @@
               <li class="top-memu__list-item shop-tff">Testforfree <span class="shops-labels__tff-number">(35)</span></li>
               <li class="top-memu__list-item shop-followers">Подписчики <span class="shops-labels__followers-number">(112)</span></li>
               <li class="top-memu__list-item shop-contact">Контакты</li>
-            </ul>
-          </div>
+						</ul> 
+						<div class="top-memu__list-small inner-menu">
+							<div class="inner-menu__left">
+								<div class="black-btn">раздел</div>
+								<div class="filter-popular filter-wrap">
+									<div class="filter-popular__header filter__header">
+										<span class="filter-popular__current filter__current">Товары <span class="shops-labels__goods-number">(35)</span></span>
+										<div class="filter-popular__icon filter__icon"></div>
+									</div>
+									<div class="filter-popular__body filter__body">
+										<div class="filter-popular__item filter__item top-memu__list-item shop-goods active">Товары <span class="shops-labels__goods-number">(35)</span></div>
+										<div class="filter-popular__item filter__item top-memu__list-item shop-sp">Совместные покупки <span class="shops-labels__sp-number">(35)</span></div>
+										<div class="filter-popular__item filter__item top-memu__list-item shop-tff">Testforfree <span class="shops-labels__tff-number">(35)</span></div>
+										<div class="filter-popular__item filter__item top-memu__list-item shop-followers">Подписчики <span class="shops-labels__followers-number">(112)</span></div>
+										<div class="filter-popular__item filter__item top-memu__list-item shop-contact">Контакты</div>
+									</div>
+								</div>
+							</div>
+							<div class="inner-menu__right">
+								<div class="black-btn">Каталог товаров
+									<span class="menu__catalog-btn-arrow"></span>
+								</div>
+								<div class="filter-wrap-select">
+									<div class="select__filter">Фильтры <span class="label-icons">0</span></div>
+								</div>
+							</div>
+						</div>		
+	        </div>
         </div>
       </div>
 
       <div class="shops-goods shop-block active">
-        <div class="shops-left-menu left-menu">
-					<div class="left-menu__title">
-						товары <span class="left-menu__title-number">35 шт</span> 
+        <menu class="goods-menu">
+					<div class="categories__title-wrap">
+						<h2 class="categories__title">платья и сарафаны</h2>
+						<div class="categories__ammount">
+							<span class="categories__number-goods">1 200</span> товаров
+						</div>
 					</div>
-					<ul class="left-menu__list">
-						<li class="active"><a href="#">Одежда</a></li>
-						<li><a href="#">Верхняя одежда</a></li>
-						<li><a href="#">Джемперы и кардиганы</a></li>
-						<li><a href="#">Блузы и рубашки</a></li>
-						<li><a href="#">Юбки</a></li>
-					</ul>
-				</div>
+					<li class="goods-menu__main"><a href="#">Одежда</a></li>
+					<li><a href="#">Верхняя одежда</a></li>
+					<li class="goods-menu_active"><a href="#">Платья и сарафаны</a>
+						<ul class="goods-menu__current-list">
+							<li><a href="#">Повседневные платья</a></li>
+							<li><a href="#">Летние платья</a></li>
+							<li><a href="#">Коктельные платья</a></li>
+							<li><a href="#">Вечерние платья</a></li>
+							<li><a href="#">Деловые платья</a></li>
+							<li><a href="#">Сарафаны</a></li>
+							<li><a href="#">Вязаные платья</a></li>
+							<li><a href="#">Пляжные платья, туники</a></li>
+							<li><a href="#">Джинсовые платья</a></li>
+							<li><a href="#">Платья-мини</a></li>
+							<li><a href="#">Платья-миди</a></li>
+							<li><a href="#">Платья-макси</a></li>
+							<li><a href="#">Платья больших размеров</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Джемперы и кардиганы</a></li>
+					<li><a href="#">Блузы и рубашки</a></li>
+					<li><a href="#">Юбки</a></li>
+					<li><a href="#">Брюки</a></li>
+					<li><a href="#">Комбинезоны</a></li>
+					<li><a href="#">Джинсы</a></li>
+					<li><a href="#">Пиджаки и костюмы</a></li>
+					<li><a href="#">Толстовки и олимпийки</a></li>
+					<li><a href="#">Футболки и поло</a></li>
+				</menu>
 				<div class="shops-goods__content">
 					<div class="categories__filter filter">
 
@@ -217,15 +282,15 @@
 							<div class="card-categories__inner">
 															
 								<div class="card-categories__item">
-									<div class="card-categories__img">
-										<a href="#">
+									<a class="card-categories__img" href="#">
+										<div class="card-categories__link">
 											<img src="img/slider-item.png" alt="">
-										</a>
+										</div>
 										<div class="goods-slider__options card-categories__icons">
 											<div class="goods-slider__options-heart"></div>
 											<div class="goods-slider__options-share"></div>
 										</div>
-									</div>
+									</a>
 									<div class="card-categories__descr">
 										<div class="card-categories__descr-wrap">
 											<div class="card-categories__stock">
@@ -282,15 +347,15 @@
 								</div>
 
 								<div class="card-categories__item card-categories__item_stock">
-									<div class="card-categories__img">
-										<a href="#">
+									<a class="card-categories__img" href="#">
+										<div class="card-categories__link">
 											<img src="img/slider-item.png" alt="">
-										</a>
+										</div>
 										<div class="goods-slider__options card-categories__icons">
 											<div class="goods-slider__options-heart"></div>
 											<div class="goods-slider__options-share"></div>
 										</div>
-									</div>
+									</a>
 									<div class="card-categories__descr">
 										<div class="card-categories__descr-wrap">
 											<div class="card-categories__stock">
@@ -347,15 +412,15 @@
 								</div>
 
 								<div class="card-categories__item">
-									<div class="card-categories__img">
-										<a href="#">
+									<a class="card-categories__img" href="#">
+										<div class="card-categories__link">
 											<img src="img/slider-item.png" alt="">
-										</a>
+										</div>
 										<div class="goods-slider__options card-categories__icons">
 											<div class="goods-slider__options-heart"></div>
 											<div class="goods-slider__options-share"></div>
 										</div>
-									</div>
+									</a>
 									<div class="card-categories__descr">
 										<div class="card-categories__descr-wrap">
 											<div class="card-categories__stock">
@@ -412,15 +477,15 @@
 								</div>
 
 								<div class="card-categories__item card-categories__item_stock">
-									<div class="card-categories__img">
-										<a href="#">
+									<a class="card-categories__img" href="#">
+										<div class="card-categories__link">
 											<img src="img/slider-item.png" alt="">
-										</a>
+										</div>
 										<div class="goods-slider__options card-categories__icons">
 											<div class="goods-slider__options-heart"></div>
 											<div class="goods-slider__options-share"></div>
 										</div>
-									</div>
+									</a>
 									<div class="card-categories__descr">
 										<div class="card-categories__descr-wrap">
 											<div class="card-categories__stock">
@@ -477,15 +542,15 @@
 								</div>
 
 								<div class="card-categories__item">
-									<div class="card-categories__img">
-										<a href="#">
+									<a class="card-categories__img" href="#">
+										<div class="card-categories__link">
 											<img src="img/slider-item.png" alt="">
-										</a>
+										</div>
 										<div class="goods-slider__options card-categories__icons">
 											<div class="goods-slider__options-heart"></div>
 											<div class="goods-slider__options-share"></div>
 										</div>
-									</div>
+									</a>
 									<div class="card-categories__descr">
 										<div class="card-categories__descr-wrap">
 											<div class="card-categories__stock">
@@ -542,15 +607,15 @@
 								</div>
 
 								<div class="card-categories__item card-categories__item_stock">
-									<div class="card-categories__img">
-										<a href="#">
+									<a class="card-categories__img" href="#">
+										<div class="card-categories__link">
 											<img src="img/slider-item.png" alt="">
-										</a>
+										</div>
 										<div class="goods-slider__options card-categories__icons">
 											<div class="goods-slider__options-heart"></div>
 											<div class="goods-slider__options-share"></div>
 										</div>
-									</div>
+									</a>
 									<div class="card-categories__descr">
 										<div class="card-categories__descr-wrap">
 											<div class="card-categories__stock">
@@ -607,15 +672,15 @@
 								</div>
 
 								<div class="card-categories__item">
-									<div class="card-categories__img">
-										<a href="#">
+									<a class="card-categories__img" href="#">
+										<div class="card-categories__link">
 											<img src="img/slider-item.png" alt="">
-										</a>
+										</div>
 										<div class="goods-slider__options card-categories__icons">
 											<div class="goods-slider__options-heart"></div>
 											<div class="goods-slider__options-share"></div>
 										</div>
-									</div>
+									</a>
 									<div class="card-categories__descr">
 										<div class="card-categories__descr-wrap">
 											<div class="card-categories__stock">
@@ -672,15 +737,15 @@
 								</div>
 
 								<div class="card-categories__item card-categories__item_stock">
-									<div class="card-categories__img">
-										<a href="#">
+									<a class="card-categories__img" href="#">
+										<div class="card-categories__link">
 											<img src="img/slider-item.png" alt="">
-										</a>
+										</div>
 										<div class="goods-slider__options card-categories__icons">
 											<div class="goods-slider__options-heart"></div>
 											<div class="goods-slider__options-share"></div>
 										</div>
-									</div>
+									</a>
 									<div class="card-categories__descr">
 										<div class="card-categories__descr-wrap">
 											<div class="card-categories__stock">
@@ -773,14 +838,24 @@
 						</div>
 						<div class="shops-contacts__text">
 							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos tempore, quidem itaque maxime, quis est cum saepe autem maiores sed distinctio qui ad reprehenderit! Ipsam ea tempora cupiditate provident voluptatem?
+						
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error esse quod odit rerum ullam, iste quaerat reprehenderit est numquam quidem voluptatem veritatis tempore at doloremque dolores eaque, optio ab illo.
+							Eos laudantium libero soluta culpa non praesentium iusto tenetur quasi assumenda excepturi, omnis delectus magnam optio cupiditate neque nihil modi magni ab dolor repellat velit nisi ea? Quisquam, labore sed.
+							Fugiat omnis dolorum nihil saepe maiores perspiciatis ducimus distinctio! Fuga veritatis autem odio! In, eum, quibusdam unde perferendis quis omnis, ullam voluptatum suscipit delectus beatae quasi. Dolorem aut doloremque ad!
+							Quos, eaque. Expedita ad, dolores fuga sunt error, nostrum eaque voluptas facere repudiandae vero labore. Nulla, aliquam. Necessitatibus accusantium, ut blanditiis tempore, in odio quis tenetur pariatur minima veniam facere.
+							Quae voluptates quia unde autem in alias, fugiat ad minus possimus quaerat quibusdam est facilis doloribus, quidem sed explicabo quas sunt id qui quasi dignissimos quis. Adipisci impedit minima asperiores!
+							Exercitationem, hic nihil vitae nobis eum saepe laboriosam temporibus nesciunt debitis fuga totam obcaecati quos commodi! Cumque asperiores necessitatibus cupiditate nisi sapiente, sint dolorem blanditiis tenetur autem, iure adipisci temporibus?
+							In amet illum dolores ex? Quod odit ea dolorum dolore at voluptate exercitationem ullam ratione atque quis ipsum quam nulla, quaerat et eum nemo esse earum aperiam quia vel voluptatum.
+							Quibusdam, dolore labore repellendus corrupti vel nemo error maiores odio quo repudiandae asperiores ea a tenetur nihil incidunt? Dicta cum sapiente quis repudiandae dolorum quae at aperiam quia, rem nesciunt.
 						</div>
 					</div>
 				</div>
 			</div>
 
       <div class="view">
-        <div class="view__button">
-          показать еще <span class="view__yet">4</span> из <span class="view__from">71</span>
+        <div class="black-btn">
+					показать еще 
+					<div class="black-btn__moreText"> <span class="view__yet"> 4 </span> из <span class="view__from"> 71 </span> </div> 
         </div>
         <div class="view__button-like">
           <div class="view__arrow">
@@ -792,9 +867,7 @@
         </div>
       </div>
     </div>
-
-
-				
+			
 		
 	</div>
 
