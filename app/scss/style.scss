@@ -14,6 +14,7 @@ body {
 	min-width: 320px;
 	overflow-x: hidden;
 	position: relative;
+	background-color: $main-color;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -73,27 +74,28 @@ html.active2 {
 
 // сетка для карточки товара
 .section-inner.goods {
-	padding: 0 0 0 50px;
+	padding: 15px 0 100px 50px;
 }
 
 
 /* шапка меню*/
+.header {
+	height: 60px;
+}
 
 .header__wrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: calc(100% - 100px);
 	height: 60px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	
-}
-
-.header.active {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: calc(100%);
-	z-index: 80;
 	background-color: #fff;
+	z-index: 15;
 }
 
 .header__wrap.active {
@@ -284,11 +286,14 @@ html.active2 {
 	display: none;
 }
 
+.menu__header {
+	max-width: 1380px;
+	width: 100%;
+}
+
 .menu__list {
 	display: flex;
 	justify-content: space-between;
-	max-width: 1380px;
-	width: 100%;
 	font-family: Bebas;
 	font-weight: 900;
 	font-size: 20px;
@@ -502,7 +507,9 @@ html.active2 {
 	}
 }
 
-
+.select__filter.filter-dopClass {
+	display: none;
+}
 
 /* Selects Categories */
 
@@ -838,15 +845,10 @@ html.active2 {
 }
 
 .card__publish {
-	width: 50%;
 	border-right: 1px solid #E4E4E4;
-	height: 100%;
-	padding: 15px 0;
-	font-weight: 500;
-	font-size: 16px;
 }
 
-.card__followers {
+.card__followers, .card__publish {
 	height: 100%;
 	width: 50%;
 	padding: 15px 0;
@@ -1223,7 +1225,7 @@ html.active2 {
   z-index: -1;
   border-bottom: none;
   border-radius: 5px 5px 0 0;
-  background-color: #fff;
+	background-color: rgba(255,255,255,0.5);
   box-shadow: 0 0 10px rgba(0, 0, 0, .5);
   transform: perspective(5px) rotateX(1deg);
 	
@@ -1233,22 +1235,28 @@ html.active2 {
 	transform: rotate(-90deg);
 }
 
-.button-bottom {
+.button-bottom, .button-middle {
 	position: fixed;
-	width: 100%;
+	width: calc(100% - 100px);
+	margin: 0 auto;
 	bottom: 0;
 	left: 0;
+	right: 0;
 	background-color: #fff;
 	height: 59px;
 	z-index: 6;
 }
 
-.button-bottom.active {
+.button-middle {
+	display: none;
 	bottom: 55%;
 }
 
-.button-bottom__reviews-cross {
-	display: none;
+.button-middle.active {
+	display: block;
+}
+
+.button-middle__reviews-cross {
 	margin: 15px auto;
 	width: 30px;
 	height: 28px;
@@ -1272,7 +1280,7 @@ html.active2 {
 	
 }
 
-.button-bottom__reviews-cross.active {
+.button-middle__reviews-cross.active {
 	display: block;
 }
 
@@ -1585,13 +1593,11 @@ html.active2 {
 	font-family: "Fira-Sans";
 	font-weight: 400;
 	font-size: 16px;
-	padding-top: 15px;
-	padding-bottom: 50px;
 }
 
 .goods-menu {
 	max-width: 395px;
-	min-width: 290px;
+	min-width: 200px;
 	margin: 0;
 	padding-left: 0;
 	line-height: 32px;
@@ -1605,10 +1611,6 @@ html.active2 {
 	}
 	li>a:hover{
 		color: $accent-color;
-	}
-	&__main {
-		font-weight: 500;
-		font-size: 20px;
 	}
 	&_active > a {
 		color: $accent-color;
@@ -2230,6 +2232,7 @@ html.active2 {
 }
 
 .goods-buy__descr-more {
+	display: inline-block;
 	margin-top: 16px;
 	color: $accent-color;
 	font-family: "Bebas";
@@ -2718,9 +2721,13 @@ html.active2 {
 	font-family: "Fira-Sans";
 	margin-bottom: 30px;
 	flex-wrap: wrap;
+	align-items: center;
 }
 .categories__filter.active2 {
 	display: flex;
+	.filter-wrap {
+		display: block;
+	}
 }
 
 .filter-wrap-select {
@@ -3595,7 +3602,7 @@ html.active2 {
 			position: fixed;
 			width: calc(100% - 100px);
 			margin: 0 auto;
-			top: 0;
+			top: 60px;
 			left: 0;
 			right: 0;
 			z-index: 3;
@@ -3609,12 +3616,14 @@ html.active2 {
 	}
 }
 .header-shops__logo {
-	width: 60px;
+	width: 50px;
 	height: 50px;
 	position: relative;
 	overflow: hidden;
 	margin-right: 20px;
 	flex-shrink: 0;
+	border-radius: 50%;
+	border: 2px solid #ccc;
 	img {
 		position: absolute;
 		width: 100%;
@@ -3622,45 +3631,61 @@ html.active2 {
 		object-fit: cover;
 		left: 0;
 		top: 0;
+		border-radius: 50%;
+    padding: 2px;
 	}
 }
+
 .goods-menu.active {
 	position: fixed;
-	top: 132px;
+	top: 200px;
 	left: 85px;
 	z-index: 2;
+	background-color: $main-color;
 }
 .top-memu.active {
 	position: fixed;
-	width: calc(100% - 50px);
+	width: 100vw;
 	background-color: $main-color;
-	padding-left: 408px;
-	padding-right: 30px;
+	padding-left: 412px;
+	padding-right: 105px;
 	padding-top: 40px;
-	top: 50px;
+	top: 120px;
 	right: 0;
 	left: 0;
 	z-index: 2;
 	.top-memu__list {
-		width: 80%;
+		max-width: 1390px;
+		margin: 0 auto;
 	}
 }
 .shop-block {
+	.black-btn {
+		display: none;
+		margin-right: 20px;
+		margin-bottom: 5px;
+	}
 	.filter.active3 {	
 		position: fixed;
-		width: calc(100% - 100px);
-		padding-left: 357px;
+		width: 100%;
+		padding-left: 308px;
 		padding-bottom: 20px;
-		padding-right: 30px;
-		padding-top: 10px; 
+		padding-right: 40px;
+		padding-top: 78px; 
 		background-color: #F7FBFB;
 		top: 122px;	
-		right: 50px;
 		z-index: 1;
+		.filter-wrap.active {
+			display: block;
+			width: 100%;
+			margin-right: 0;
+		}
 	}
 }
-
-
+.wrap-menu-btn {
+	display: flex;
+	justify-content: space-between;
+}
 .shops-item__subscribe {
 	display: flex;
 	align-items: center;
@@ -3762,9 +3787,6 @@ html.active2 {
 		width: 100%;
 		background-color: #fff;
 	}
-}
-.shops-item__name {
-	font-size: 24px;
 }
 .shops-menu-top {
 	background-color: $main-color;
@@ -3929,6 +3951,10 @@ html.active2 {
 	.simplebar-scrollbar.simplebar-visible:before {
 		opacity: 1;	/* непрозрачность ползунка */
 	}
+}
+
+.together-popup {
+	padding: 0 0 100px;
 }
 
 .reviews-popup.active, .together-popup.active, .details-popup.active, .win-popup.active {
@@ -4187,11 +4213,12 @@ html.active2 {
 // popup поробнее о товаре
 
 .details-popup__wrap {
-	padding-top: 58px;
 	display: flex;
 	justify-content: space-between;
 	font-weight: 400;
 	font-size: 16px;
+  padding: 58px 0px 100px;
+  font-size: 16px;
 	.goods-buy__delivery {
 		color: #3D3F3F;
 		line-height: 28px;
@@ -4299,7 +4326,7 @@ html.active2 {
 	left: 0;
 	top: 60px;
 	background-color: rgba(0,0,0,0.5);
-	z-index: 5;
+	z-index: 7;
 	color: #3D3F3F;
 	font-family: 'Fira-Sans';
 	font-weight: 500;

@@ -21,7 +21,7 @@
 				<div class="burger-wrap">
 					<span> </span>
 				</div>
-				<div class="header__menu">
+				<nav class="header__menu">
 					<ul class="header__list">
 						<li class="header__items"><a href="#">магазины</a></li>
 						<li class="header__items"><a href="#">совместные покупки</a></li>
@@ -29,7 +29,7 @@
 						<li class="header__items"><a href="bloggers.html">блогеры</a></li>
 						<li class="header__items"><a href="publications.html">публикации</a></li>
 					</ul>
-				</div>
+				</nav>
 				<div class="header__shadow"></div>
 			</div>
 		</div>
@@ -47,16 +47,18 @@
 						<div class="menu__catalog-btn">
 							<div class="black-btn">Каталог товаров <span class="menu__catalog-btn-arrow"></span> </div> 
 						</div>
-						<ul class="menu__list">
-							<li class="menu__items"><a href="#">женщинам</a></li>
-							<li class="menu__items"><a href="#">мужчинам</a></li>
-							<li class="menu__items"><a href="#">детям</a></li>
-							<li class="menu__items"><a href="#">для дома</a></li>
-							<li class="menu__items"><a href="#">красота и здоровье</a></li>
-							<li class="menu__items"><a href="#">спорт и развлечения</a></li>
-							<li class="menu__items"><a href="#">техника и электроника</a></li>
-							<li class="menu__items"><a href="#">другое</a></li>
-						</ul>
+						<nav class="menu__header">
+							<ul class="menu__list">
+								<li class="menu__items"><a href="#">женщинам</a></li>
+								<li class="menu__items"><a href="#">мужчинам</a></li>
+								<li class="menu__items"><a href="#">детям</a></li>
+								<li class="menu__items"><a href="#">для дома</a></li>
+								<li class="menu__items"><a href="#">красота и здоровье</a></li>
+								<li class="menu__items"><a href="#">спорт и развлечения</a></li>
+								<li class="menu__items"><a href="#">техника и электроника</a></li>
+								<li class="menu__items"><a href="#">другое</a></li>
+							</ul>
+						</nav>
 						<div class="menu__icons-wrap">
 							<span class="label-post">Запостить</span>
 							<ul class="menu__list-icons">
@@ -77,7 +79,6 @@
 		</div>
 	</div>
 
-
 	
 	<!-- страница товара -->
 	
@@ -85,36 +86,38 @@
 		<section class="goods">
 			<div class="section-inner goods">
 				<div class="goods__inner">
-					<menu class="goods-menu">
-						<li class="goods-menu__main"><a href="#">Одежда</a></li>
-						<li><a href="#">Верхняя одежда</a></li>
-						<li class="goods-menu_active"><a href="#">Платья и сарафаны</a>
-							<ul class="goods-menu__current-list">
-								<li><a href="#">Повседневные платья</a></li>
-								<li><a href="#">Летние платья</a></li>
-								<li><a href="#">Коктельные платья</a></li>
-								<li><a href="#">Вечерние платья</a></li>
-								<li><a href="#">Деловые платья</a></li>
-								<li><a href="#">Сарафаны</a></li>
-								<li><a href="#">Вязаные платья</a></li>
-								<li><a href="#">Пляжные платья, туники</a></li>
-								<li><a href="#">Джинсовые платья</a></li>
-								<li><a href="#">Платья-мини</a></li>
-								<li><a href="#">Платья-миди</a></li>
-								<li><a href="#">Платья-макси</a></li>
-								<li><a href="#">Платья больших размеров</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Джемперы и кардиганы</a></li>
-						<li><a href="#">Блузы и рубашки</a></li>
-						<li><a href="#">Юбки</a></li>
-						<li><a href="#">Брюки</a></li>
-						<li><a href="#">Комбинезоны</a></li>
-						<li><a href="#">Джинсы</a></li>
-						<li><a href="#">Пиджаки и костюмы</a></li>
-						<li><a href="#">Толстовки и олимпийки</a></li>
-						<li><a href="#">Футболки и поло</a></li>
-					</menu>
+					<div class="goods-menu">
+						<ul>
+							<li class="goods-menu__main"><a href="#">Одежда</a></li>
+							<li><a href="#">Верхняя одежда</a></li>
+							<li class="goods-menu_active"><a href="#">Платья и сарафаны</a>
+								<ul class="goods-menu__current-list">
+									<li><a href="#">Повседневные платья</a></li>
+									<li><a href="#">Летние платья</a></li>
+									<li><a href="#">Коктельные платья</a></li>
+									<li><a href="#">Вечерние платья</a></li>
+									<li><a href="#">Деловые платья</a></li>
+									<li><a href="#">Сарафаны</a></li>
+									<li><a href="#">Вязаные платья</a></li>
+									<li><a href="#">Пляжные платья, туники</a></li>
+									<li><a href="#">Джинсовые платья</a></li>
+									<li><a href="#">Платья-мини</a></li>
+									<li><a href="#">Платья-миди</a></li>
+									<li><a href="#">Платья-макси</a></li>
+									<li><a href="#">Платья больших размеров</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Джемперы и кардиганы</a></li>
+							<li><a href="#">Блузы и рубашки</a></li>
+							<li><a href="#">Юбки</a></li>
+							<li><a href="#">Брюки</a></li>
+							<li><a href="#">Комбинезоны</a></li>
+							<li><a href="#">Джинсы</a></li>
+							<li><a href="#">Пиджаки и костюмы</a></li>
+							<li><a href="#">Толстовки и олимпийки</a></li>
+							<li><a href="#">Футболки и поло</a></li>
+						</ul>
+					</div>
 					<div class="goods-slider">
 						<div class="goods-slider__wrap">
 							<div class="goods-slider__inner">
@@ -300,7 +303,7 @@
 									<div class="goods-buy__reviews-title">
 										Отзывы пользователей <span class="goods-buy__reviews-title-number">1 200</span> <span>публикаций</span>
 									</div>
-									<div class="black-btn">
+									<div class="black-btn goods-buy__reviews-btn">
 										добавить пост
 									</div>
 								</div>
@@ -401,7 +404,7 @@
 				<div class="section-inner reviews">
 					<div class="reviews-popup__title-wrap">
 						<div class="reviews-popup__title">Отзывы пользователей</div>
-						<div class="black-btn">добавить пост</div>
+						<div class="black-btn goods-buy__reviews-btn">добавить пост</div>
 					</div>
 
 					<div class="content__inner">
@@ -886,6 +889,12 @@
 		</div>
 	</div>
 
+	<!-- белая полоска по центру с крестиком у попавов для закрытия попапа -->
+
+	<div class="button-middle">
+		<div class="button-middle__reviews-cross"></div>
+	</div>
+
 
 
 	<!-- popup добавить пост НЕ авторизованному пользователю -->
@@ -940,7 +949,7 @@
 	
 
 	<div class="button-bottom">
-		<div class="button-bottom__reviews-cross"></div>
+	
 	</div>	
 
 
